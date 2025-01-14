@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function bodyload() {
+            var now = new Date();
+            now.setHours(20);
+            var hrs = now.getHours();
+            var lblTitle = document.getElementById("lblTitle");
+            var pic = document.getElementById("pic");
+            lblTitle.innerHTML = prompt("Enter Your Name");
+
+            if (hrs >= 0 && hrs <= 12) {
+                pic.src = "../public/image/morning-gif.webp";
+            } else if (hrs > 12 && hrs <= 16) {
+                pic.src = "../public/image/afternoon-gif.webp";
+            } else {
+                pic.src = "../public/image/evening-gif.webp";
+            }
+        } 
+    </script>
+</head>
+
+<body onload="bodyload()">
+    <div align="center">
+        <h2 id="lblTitle"></h2>
+        <img width="100" height="100" id="pic">
+    </div>
+</body>
+
+</html>

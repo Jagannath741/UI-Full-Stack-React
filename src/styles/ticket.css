@@ -1,0 +1,13 @@
+.ticket{
+    font-family: arial;
+    border: 3px double red;
+    padding: 20px;
+    background-color: rgb(230, 230, 126);
+}
+dl{
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+}
+dt{
+    font-weight: bold;
+}

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persional details</title>
+    <link rel="stylesheet" href="./index6.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        function nextToedu() {
+            document.getElementById("education-details").style.display = "block";
+            document.getElementById("application-details").style.display = "none";
+        }
+        function createRow() {
+            const tbody = document.getElementById("data-input-table");
+            const row = document.createElement("tr");
+            row.innerHTML = "<td><select><option value=''>" +
+                "select...</option>" +
+                "<option value=''>X</option>" +
+                "<option value=''>plus 2</option>" +
+                "<option value=''>plus 3</option>" +
+                "<option value=''>post graduation</option>" +
+                "</select></td>" +
+                "<td><select><option value=''>BSE, Odisha</option>" +
+                "<option value=''>CHSE, Odisha</option>" +
+                "<option value=''>CBSE</option>" +
+                "<option value=''>ICSE</option>" +
+                "<option value=''>Other</option>" +
+                "<option value=''>University</option></select></td>" +
+                "<td><input type='text'></td><td><input type='number'></td><td><input type='number'></td><td><input type='number'></td><td><input type='number'></td><td><input type='file'></td>" +
+                "<td><button onclick='createRow()'><span class='bi bi-plus'></span></button></td>"
+            tbody.appendChild(row);
+        }
+    </script>
+</head>
+
+<body class="container-fluid">
+    <header>
+        <div class="header-part">
+            <div class="left-header">
+                <!-- <div class="title">
+                    Odisha State Scholarship Portal
+                </div>
+                <div class="sub-title">
+                    Government of Odisha
+                </div> -->
+                <span>
+                    <img src="./image/NSP-logo.p" alt="" height="70px">
+                </span>
+            </div>
+            <div class="right-header">
+                <span>About</span>
+                <span>Schemes</span>
+                <span>How to Apply</span>
+                <span>FAQs</span>
+                <span>Contact Us</span>
+                <span class="bi bi-search"></span>
+            </div>
+        </div>
+    </header>
+    <section>
+        <main>
+            <div class="side-option">
+                <div>
+                    <div class="top-design">
+                    </div>
+                    <img src="../Public/image/pass-photo.jpeg" alt="" class="profile-img" height="155px" width="145px">
+                    <div class="name-id">
+                        <h3 class="candidate-name">Jagannath Patra</h3>
+                        <div class="id-no">
+                            Unique ID: 2105324032
+                        </div>
+                        <div class="last-login">
+                            Last Login: 12-08-2024 22:42:41
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-option">
+                    <div class="option">
+                        <div class="bi bi-grid"></div>
+                        <div class="icon-title">Dashboard</div>
+                    </div>
+                    <div class="option">
+                        <div class="bi bi-journal-bookmark"></div>
+                        <div class="icon-title">Schemes & Eligibility</div>
+                    </div>
+                    <div class="option">
+                        <div class="bi bi-trophy"></div>
+                        <div class="icon-title">Apply Scholarship</div>
+                    </div>
+                    <div class="option">
+                        <div class="bi bi-pencil-square"></div>
+                        <div class="icon-title">View/Renew Application</div>
+                    </div>
+                    <div class="option">
+                        <div class="bi bi-pencil-square"></div>
+                        <div class="icon-title">View Change Category Request</div>
+                    </div>
+                    <div class="option">
+                        <div class="bi bi-pencil-square"></div>
+                        <div class="icon-title">Apply Freeship Card</div>
+                    </div>
+                    <div class="option">
+                        <div class="bi bi-info-circle"></div>
+                        <div class="icon-title">Notification</div>
+                    </div>
+                    <div class="option">
+                        <div class="bi bi-unlock"></div>
+                        <div class="icon-title">Change Password</div>
+                    </div>
+                </div>
+            </div>
+            <div class="input-section" id="application-details">
+                <div class="page-name">Application Details</div>
+                <fieldset class="fieldset-box">
+                    <legend class="std-info"><span>Student Information</span></legend>
+                    <div>
+                        <div class="input-options">
+                            <div>
+                                <label for="sch-dept" class="option-head">Department</label>
+                                <br>
+                                <select id="sch-dept" class="option-box">
+                                    <option value="">Select..</option>
+                                    <option value="">ST&SC and MBC walfare department</option>
+                                    <option value="">General walfare</option>
+                                    <option value="">ST&SC Scholarship</option>
+                                    <option value="">OBC walfare department</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="Scheme" class="option-head">Scheme</label>
+                                <br>
+                                <select name="scheme" id="Scheme" class="option-box">
+                                    <option value="">Select..</option>
+                                    <option value="">Post matric Scholarship</option>
+                                    <option value="">Pre matric Scholarship</option>
+                                    <option value="">Intermediate Scholarship</option>
+                                    <option value="">Under Graduation Scholarship</option>
+                                    <option value="">Post graduation Scholarship</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="sch-year" class="option-head">Academic Year</label>
+                                <br>
+                                <select id="sch-year" class="option-box">
+                                    <option value="">Select..</option>
+                                    <option value="">2023-24</option>
+                                    <option value="">2024-25</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-options-bottom">
+                            <div>
+                                <label for="application-type" class="option-head">Aplication Type</label>
+                                <br>
+                                <select id="application-type" class="option-box">
+                                    <option value="">Select..</option>
+                                    <option value="">New</option>
+                                    <option value="">Renew in the same course</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="fieldset-box">
+                    <legend class="std-info"><span>Applicant Details</span></legend>
+                    <div>
+                        <div class="input-options">
+                            <div>
+                                <label for="applicant-name" class="option-head">Applicant name</label>
+                                <br>
+                                <input type="text" id="applicant-name" class="option-box" placeholder="Enter Your Name">
+                            </div>
+                            <div>
+                                <label for="category" class="option-head">Applicant name</label>
+                                <br>
+                                <select id="category" class="option-box">
+                                    <option value="">Select..</option>
+                                    <option value="">OBC/SEBC</option>
+                                    <option value="">General</option>
+                                    <option value="">SC</option>
+                                    <option value="">ST</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="applicant-gender" class="option-head">Applicant Gender</label>
+                                <br>
+                                <select id="applicant-gender" class="option-box">
+                                    <option value="">Select..</option>
+                                    <option value="">Male</option>
+                                    <option value="">Female</option>
+                                    <option value="">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-options">
+                            <div>
+                                <label for="religion" class="option-head">Religion</label>
+                                <br>
+                                <select id="religion" class="option-box">
+                                    <option value="">Select..</option>
+                                    <option value="">Hindu</option>
+                                    <option value="">Muslim</option>
+                                    <option value="">Christian</option>
+                                    <option value="">Sikh</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="DOB" class="option-head">Date of Birth</label>
+                                <br>
+                                <input type="date" id="DOB" class="option-box">
+                            </div>
+                            <div>
+                                <label for="aadhaar-no" class="option-head">Aadhaar No.</label>
+                                <br>
+                                <input type="text" id="aadhaar-no" class="option-box"
+                                    placeholder="Give me Your Aadhaar Number" pattern="\d{12}">
+                            </div>
+                        </div>
+                        <div class="input-options">
+                            <div>
+                                <label for="phone-no" class="option-head">Mobile No.</label>
+                                <br>
+                                <input type="number" id="phone-no" class="option-box" placeholder="Your Mobile Number"
+                                    pattern="\d{10}">
+                            </div>
+                            <div>
+                                <label for="alt-phone-no" class="option-head">Alternative Mobile No.</label>
+                                <br>
+                                <input type="number" id="alt-phone-no" class="option-box"
+                                    placeholder=" Your Alternative Number" pattern="\d{10}">
+                            </div>
+                            <div>
+                                <label for="email" class="option-head">E-mail ID</label>
+                                <br>
+                                <input type="text" id="email" class="option-box" placeholder="Your e-mail">
+                            </div>
+                        </div>
+                        <div class="input-options">
+                            <div>
+                                <label for="f-name" class="option-head">Father's Name</label>
+                                <br>
+                                <input type="text" id="f-name" class="option-box" placeholder="Your Father's Name"
+                                    pattern="[A-Z,a-z]">
+                            </div>
+                            <div>
+                                <label for="f-edu" class="option-head">Father Educational Status</label>
+                                <br>
+                                <select id="f-edu" class="option-box">
+                                    <option value="">Select..</option>
+                                    <option value="">Literate</option>
+                                    <option value="">Illiterate</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="f-occup" class="option-head">Father Occupation Status</label>
+                                <br>
+                                <select id="f-occup" class="option-box">
+                                    <option value="">Select..</option>
+                                    <option value="">Businessman</option>
+                                    <option value="">Self Employed</option>
+                                    <option value="">House Wife</option>
+                                    <option value="">Labour</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-options">
+                            <div>
+                                <label for="m-name" class="option-head">Mother's Name</label>
+                                <br>
+                                <input type="text" id="m-name" class="option-box" placeholder="Your Mother's Name"
+                                    pattern="[A-Z,a-z]">
+                            </div>
+                            <div>
+                                <label for="m-edu" class="option-head">Mother Educational Status</label>
+                                <br>
+                                <select id="m-edu" class="option-box">
+                                    <option value="">Select..</option>
+                                    <option value="">Literate</option>
+                                    <option value="">Illiterate</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="m-occup" class="option-head">Mother Occupation Status</label>
+                                <br>
+                                <select id="m-occup" class="option-box">
+                                    <option value="">Select..</option>
+                                    <option value="">Businessman</option>
+                                    <option value="">Self Employed</option>
+                                    <option value="">House Wife</option>
+                                    <option value="">Labour</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="fieldset-box">
+                    <legend class="std-info"><span>Address Information</span></legend>
+                    <div class="input-options">
+                        <div>
+                            <label for="state" class="option-head">State</label>
+                            <br>
+                            <select id="state" class="option-box">
+                                <option value="">Select..</option>
+                                <option value="">Andhra Pradesh</option>
+                                <option value="">Arunachal Pradesh</option>
+                                <option value="">Assam, Bihar</option>
+                                <option value="">Chhattisgarh</option>
+                                <option value="">Goa</option>
+                                <option value="">Gujarat</option>
+                                <option value="">Haryana</option>
+                                <option value="">Himachal Pradesh</option>
+                                <option value="">Jharkhand</option>
+                                <option value="">Karnataka</option>
+                                <option value="">Kerala</option>
+                                <option value="">Madhya Pradesh</option>
+                                <option value="">Maharashtra</option>
+                                <option value="">Manipur</option>
+                                <option value="">Meghalaya</option>
+                                <option value="">Mizoram</option>
+                                <option value="">Nagaland</option>
+                                <option value="">Odisha</option>
+                                <option value="">Punjab</option>
+                                <option value="">Rajasthan</option>
+                                <option value="">Sikkim</option>
+                                <option value="">Tamil Nadu</option>
+                                <option value="">Telangana</option>
+                                <option value="">Tripura</option>
+                                <option value="">Uttar Pradesh</option>
+                                <option value="">Uttarakhand</option>
+                                <option value="">West Bengal</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="district" class="option-head">District</label>
+                            <br>
+                            <input type="text" id="district" class="option-box" placeholder="Enter your District"
+                                pattern="[A-Z,a-z]">
+                        </div>
+                        <div>
+                            <label for="city" class="option-head">City</label>
+                            <br>
+                            <input type="text" id="city" class="option-box" placeholder="Enter your city"
+                                pattern="[A-Z,a-z]">
+                        </div>
+                    </div>
+                    <div class="input-options">
+                        <div>
+                            <label for="block" class="option-head">Block/ULB</label>
+                            <br>
+                            <input type="text" id="block" class="option-box" placeholder="Enter your Block"
+                                pattern="[A-Z,a-z]">
+                        </div>
+                        <div>
+                            <label for="pincode" class="option-head">Pincode</label>
+                            <br>
+                            <input type="text" id="pincode" class="option-box" placeholder="Pincode" pattern="[0-9]">
+                        </div>
+                        <div>
+                            <label for="address" class="option-head">Address</label>
+                            <br>
+                            <input type="text" id="address" class="option-box" placeholder="your address"
+                                pattern="[A-Z,a-z]">
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="save-next-btn">
+                    <button type="submit" class="btn-save" onClick="window.print()">Save</button>
+                    <button class="btn-next" onclick="nextToedu()">Next</button>
+                </div>
+            </div>
+            <div class="input-section" id="education-details" style="display: none;">
+                <div class="page-name">Education Details</div>
+                <fieldset class="fieldset-box">
+                    <legend class="std-info"><span>Educational Qualification Details</span></legend>
+                    <div class="input-table table-responsive">
+                        <table class="table table-hover table-striped table-bordered caption-top">
+                            <caption class="option-head">For : Matric-Annual</caption>
+                            <colgroup span="2"></colgroup>
+                            <thead>
+                                <tr>
+                                    <th width="40"><span>Course</span></th>
+                                    <th width="70"><span>Board</span></th>
+                                    <th width="200"><span>Roll No.</span></th>
+                                    <th width="40"><span>Passing Year</span></th>
+                                    <th width="70"><span>Total Mark/CGPA</span></th>
+                                    <th width="70"><span>Secured Marks/CGPA</span></th>
+                                    <th width="70"><span>Percentage (%)</span></th>
+                                    <th width="70"><span>Marksheet / Certifiacte</span></th>
+                                </tr>
+                            </thead>
+                            <tbody id="data-input-table">
+                                <tr>
+                                    <td>
+                                        <select name="course" id="course">
+                                            <option value="">select...</option>
+                                            <option value="">X</option>
+                                            <option value="">Plus 2</option>
+                                            <option value="">plus 3</option>
+                                            <option value="">post graduation</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="board" id="board">
+                                            <option value="">BSE, Odisha</option>
+                                            <option value="">CHSE, Odisha</option>
+                                            <option value="">CBSE</option>
+                                            <option value="">ICSE</option>
+                                            <option value="">Other</option>
+                                            <option value="">University</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text"></td>
+                                    <td><input type="number"></td>
+                                    <td><input type="number"></td>
+                                    <td><input type="number"></td>
+                                    <td><input type="number"></td>
+                                    <td><input type="file"></td>
+                                    <td><button onclick="createRow()"><span class="bi bi-plus"></span></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </fieldset>
+                <fieldset class="fieldset-box">
+                    <legend class="std-info"><span>Institute/Course Information (cureent Education Infromation)</span>
+                    </legend>
+                </fieldset>
+
+            </div>
+        </main>
+    </section>
+</body>
+
+</html>

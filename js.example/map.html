@@ -1,0 +1,12 @@
+<script type="text/javascript">
+    var data = new Map();
+
+    data.set(2,{Name:"Samsung TV",Price:"5000"});
+    data.set("HTML","It is a mark of language");
+    data.set("cities",["Delhi","Hyd"]);
+
+    Object.keys(data.get(2)).map(function(item){
+        document.write(`${item}:${data.get(2)[item]}<br>`)
+    });
+    document.write(`Total no of key : ${data.size}`);
+</script>

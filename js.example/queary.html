@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyload()
+        {
+            querystring = location.search;
+            equalposition = location.search.indexOf("=");
+            vaule = location.search.slice(equalposition+1);
+
+            document.getElementById("msg").innerHTML=vaule;
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <p>Hello !<span id="msg"></span></p>
+</body>
+</html>

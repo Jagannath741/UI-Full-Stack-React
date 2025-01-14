@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var data = [
+            { category: "Electronics", Products: ["Tv", "Mobile", "Watch"] },
+            { category: "footwear", Products: ["Sneakers", "Causuals"] }
+        ];
+        function bodyload() {
+            for (var i=0; i<data.length; i++) {
+                var li = document.createElement("li");
+                li.innerHTML = data[i].category;
+                for (var j = 0; j < data[i].Products.length; j++) {
+                    var ul = document.createElement("ul");
+                    var uili = document.createElement("li");
+
+                    uili.innerHTML = data[i].Products[j];
+                    ul.appendChild(uili);
+                    li.appendChild(ul);
+                    document.querySelector("ol").appendChild(li);
+                }
+            }
+        }
+    </script>
+</head>
+
+<body onload="bodyload()">
+    <ol>
+
+    </ol>
+</body>
+
+</html>

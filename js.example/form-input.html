@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function createclick() {
+            foldername = document.getElementById("txtfolder").value;
+            if (foldername == "") {
+                alert("Folder Name Required")
+            }
+            else {
+                document.querySelector("p").innerHTML += " Folder created : " + foldername + "<br>"
+                document.getElementById("txtfolder").value = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="txtfolder"> <button onclick="createclick()">Create Folder</button>
+    <p></p>
+</body>
+
+</html>

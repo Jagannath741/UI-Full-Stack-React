@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>netflix</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body{
+            background-size: cover;
+        }
+        .shade {
+            background-color: rgba(0,0,0,0.4);
+            margin-top: -10px;
+            margin-left: -10px;
+            width: 101.2%;
+           }
+           header{
+            padding: 30px;
+            font-family: arial;
+            display: flex;
+            justify-content: space-between;
+           }
+           .brand-title{
+            color: red;
+            text-shadow: 1px 1px 2px white;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: Arial;
+           }
+           .language{
+            border: 1px solid white;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: rgba(0,0,0,0.5);
+           }
+           .btn-signin{
+            background-color:red;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-left: 10px;
+           }
+           main {
+            color:white;
+            text-align: center;
+            padding-top: 150px;
+            font-family: Arial;
+           }
+           .main-title{
+            font-size: 50px;
+            font-weight: bold;
+            padding-bottom: 20px;
+           }
+           .main-subtitile{
+            font-size: 25px;
+           }
+           .form{
+            margin-top: 20px;
+           }
+           .form-title{
+            font-size: 20px;
+            margin-bottom: 20px;
+           }
+           .email{
+            display: inline-block;
+            width: 300px;
+            padding: 15px;
+            border: 1px solid gray;
+            text-align: left;
+            background-color: rgba(0,0,0,0.5);
+            margin-right: 20px;
+            cursor: grab;
+           }
+           .btn-start {
+            width: 200px;
+            padding: 15px;
+            background-color: red;
+            color:white;
+            font-family: Arial;
+            display: inline-block;
+            cursor: grab;
+        }
+        .content{
+            height: 400px;
+        }
+        footer {
+            background-color: black;
+            color:white;
+            padding: 30px;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .row-1{
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .row-3{
+            margin-top: 20px;
+        }
+        .netflix{
+            margin-top: 20px;
+        }
+        .row-2{
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+        }
+        .col span{
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: arial;
+        }
+    </style>
+</head>
+<body background="./image/netflix-background.jpg">
+    <div class="shade">
+    <header>
+        <div>
+            <span class="brand-title">Netflix</span>
+        </div>
+        <div>
+            <span class="language">
+                <span class="bi bi-translate"></span>
+                <span>English</span>
+                <span class="bi bi-chevron-down"></span>
+            </span>
+        </span>
+        <span class="btn-signin">
+            Sign In
+        </span>
+    </header>
+    <section>
+        <main>
+            <div class="main-title">Unlimited movies , Tv shows and more</div>
+            <div class="main-subtitile">Watch anywhere , Cancel anytime</div>
+            <div class="form">
+                <div class="form-title"> Ready to watch ? Enter your email to create or restart your membership .</div>
+                <div>
+                    <span class="email">Email Address</span>
+                    <span class="btn-start">
+                        <span>Get Started </span>
+                        <span class="bi bi-chevron-right"></span>
+                    </span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="content">
+        </div>
+    </section>
+    <footer>
+        <div class="row-1">
+            <address>
+                <span>Questions? Call 000-800-919-1694</span>
+            </address>
+        </div>
+        <div class="row-2">
+            <div class="col">
+                <span>FAQ</span>
+                <span>Investor Relations</span>
+                <span>Privacy</span>
+                <span>Speed Test</span>
+            </div>
+            <div class="col">
+                <span>Help Center</span>
+                <span>Jobs</span>
+                <span>Cookie Preference</span>
+                <span>Legal Notices</span>
+            </div>
+            <div class="col">
+                <span>Account</span>
+                <span>Way to watch</span>
+                <span>Corpurate Information</span>
+                <span>Only on Netflix</span>
+            </div>
+            <div class="col">
+                <span>Media Centre</span>
+                <span>Term of use</span>
+                <span>Contact us</span>
+            </div>
+        </div>
+        <div class="row-3">
+            <div>
+                <span class="language">
+                    <span class="bi bi-translate"></span>
+                    <span>English</span>
+                    <span class="bi bi-chevron-down"></span>
+                </span>
+            </div>
+            <div class="netflix">
+                Netflix India
+            </div>
+        </div>
+    </footer>
+</div> 
+</body>
+</html>

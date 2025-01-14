@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        function AmountChnage() {
+            document.getElementById("textAmount").value = document.getElementById("rangeAmount").value;
+        }
+        function YearChange() {
+            document.getElementById("textYear").value = document.getElementById("rangeYear").value;
+        }
+        function RateChange() {
+            document.getElementById("textRate").value = document.getElementById("rangeRate").value;
+        }
+        function CalculateClick() {
+            var P = parseInt(document.getElementById("textAmount").value);
+            var N = parseInt(document.getElementById("textYear").value) * 12;
+            var R = parseFloat(document.getElementById("textRate").value) / 12 / 100;
+            var EMI = P * R * (Math.pow(1 + R, N)) / (Math.pow(1 + R, N) - 1);
+            document.getElementById("lblEmi").innerHTML = "Your Monthy EMI will be " + EMI.toLocaleString('en-in', { style: 'currency', currency: 'INR' }) + " for next " + N + " months.";
+        }
+    </script>
+</head>
+
+<body class="container-fluid bg-secondary">
+    <div class="m-4 p-3" style="background-color: lightgray;">
+        <div class="h4 mb-5 text-center">Personal Loan EMI Calculators</div>
+        <div class="row my-4">
+            <div class="col">
+                Amount you need&nbsp;<input type="text" id="textAmount" size="15">
+            </div>
+            <div class="col">
+                For&nbsp;<input type="text" size="5" id="textYear">&nbsp;years
+            </div>
+            <div class="col">
+                Interest rate&nbsp;<input type="text" size="10" id="textRate">&nbsp;%
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="range" min="50000" max="4000000" onchange="AmountChnage()" id="rangeAmount" value="500000"
+                    class="form-range">
+                <span>&#8377;50,000</span>
+                <span class="float-end">&#8377;40,00,000</span>
+            </div>
+            <div class="col">
+                <input type="range" min="1" max="5" value="2" onchange="YearChange()" id="rangeYear" class="form-range">
+                <span>1year</span>
+                <span class="float-end">5year</span>
+            </div>
+            <div class="col">
+                <input type="range" min="10.5%" max="21%" value="15" onchange="RateChange()" id="rangeRate"
+                    class="form-range">
+                <span>10.5%</span>
+                <span class="float-end">21%</span>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="text-end">
+                <button class="btn btn-primary" onclick="CalculateClick()">CALCULATE</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <div class="fs-2" id="lblEmi"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

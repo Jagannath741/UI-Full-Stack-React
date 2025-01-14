@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module">
+        import Admin,{Vendor,Users} from"../src/scripts/project.js"
+        import {Multiplication} from "../src/scripts/calculator.js"
+        document.querySelector("p").innerHTML=Vendor()+"<br>"+Users()+"<br>"+Admin()+"<br>"+"Multiplication="+Multiplication(40,50)
+    </script>
+</head>
+<body>
+    <p></p>
+</body>
+</html>

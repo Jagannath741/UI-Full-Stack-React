@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <Link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+
+<body class="container-fluid">
+    <h2>Alert</h2>
+    <div class="alert alert-success w-50 alert-dismissible">
+        <h2 class="alert-title">Registrated</h2>
+        <button class="btn btn-close" data-bs-dismiss="alert"></button>
+        <p>Registration complate succesfully...</p>
+        <a href="#" class="alert-link">Help</a>
+        <button class="btn btn-success" data-bs-dismiss="alert">Ok</button>
+    </div>
+    <div class="alert alert-danger w-50">
+        <h4>Please check following error in the form</h4>
+        <ul>
+            <li>Name of required</li>
+            <li>Password min 4 to 10 chars only</li>
+            <li>Age min 15 required</li>
+        </ul>
+        <button class="btn btn-danger" data-bs-dismiss="alert">Ok</button>
+    </div>
+</body>
+
+</html>

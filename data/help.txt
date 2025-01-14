@@ -1,0 +1,7 @@
+AJAX
+-Ajax enables partial postback
+-It allows to add news contact into page with out reloading the page
+-It can submit only specific portion of page
+-Java script provides the acrtion for Ajax
+-XML Is the language formate for data in AJAX
+-Browser use's XML HTTPRequest object for AJAX Requireds

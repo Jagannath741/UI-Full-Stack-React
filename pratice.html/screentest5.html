@@ -1,0 +1,42 @@
+<script>
+    class Product {
+        constructor(title, price, category) {
+            this.title = title;
+            this.price = price;
+            this.category = category;
+        }
+
+        print() {
+            document.write(`${this.title}<br>${this.price}<br>${this.category}<br>`);
+        }
+    }
+
+    class TV extends Product {
+        title = "Samsung TV";
+        price = 56000.44;
+        category = "Electronics";
+        Features = "Supports 4k Videos with 120hz refresh rate";
+        print() {
+            super.print();
+            document.write(`${this.Features}<br>`)
+        }
+    }
+
+    class NikeCasual extends Product {
+
+        title = "Nike casual waer";
+        price = 3450.44;
+        category = "Footwear";
+        Features = "With Foam Sole";
+        print() {
+            super.print();
+            document.write(`${this.Features}`)
+        }
+    }
+
+    
+
+
+    let nikeShoes = new NikeCasual();
+    nikeShoes.print();
+</script>

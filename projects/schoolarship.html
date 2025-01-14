@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSP : National Scholarship Portal </title>
+    <link rel="shurtcut icon" href="../Public/image/nsp1-logo.png">
+    <link rel="stylesheet" href="../projects/index7.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        let storedUsername = '';
+        let storedPassword = '';
+
+        function signUp(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            const username = document.getElementById("input-username").value;
+            const password = document.getElementById("input-password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            storedUsername = username;
+            storedPassword = password;
+            alert("Sign-up successful!");
+            clearSignUpForm();
+        }
+
+        function logIn(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            const userName = document.getElementById("username").value;
+            const passWord = document.getElementById("password").value;
+
+            if (userName === storedUsername && passWord === storedPassword) {
+                alert("Login successful");
+                window.location.href = "./index6.html"; // Redirect after successful login
+            } else {
+                alert("Login failed");
+            }
+        }
+
+        function clearSignUpForm() {
+            document.getElementById("input-username").value = '';
+            document.getElementById("input-password").value = '';
+            document.getElementById("confirm-password").value = '';
+        }
+    </script>
+</head>
+
+<body class="container-fluid">
+    <header>
+        <div class="top-header-div d-flex justify-content-between">
+            <div class="top-div-left d-flex">
+                <div class="govt-title">Government of India</div>
+                <div class="mint-title">Ministry of Electronics and Information Technology</div>
+                <div><img class="digital-logo" src="../Public/image/Digital-India-Color.svg" alt="Digital India Logo">
+                </div>
+            </div>
+            <div class="top-div-right d-flex">
+                <button data-bs-toggle="dropdown" class="login-btn">
+                    <span class="bi bi-person-circle fs-3"></span>
+                </button>
+                <ul class="dropdown-menu drop-list">
+                    <li data-bs-toggle="modal" data-bs-target="#signin">
+                        <a href="#" class="dropdown-item"><span class="dropdown-item-text"><span
+                                    class="bi bi-box-arrow-in-right"></span>Sign In</span></a>
+                    </li>
+                    <li data-bs-toggle="modal" data-bs-target="#signup">
+                        <a href="#" class="dropdown-item"><span class="dropdown-item-text"><span
+                                    class="bi bi-person-add"></span>Sign Up</span></a>
+                    </li>
+                </ul>
+
+                <!-- Sign In Modal -->
+                <div class="modal fade" id="signin">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body md-body-signup">
+                                <div class="d-flex">
+                                    <div class="login-title">Login</div>
+                                    <button data-bs-dismiss="modal" class="btn btn-close"></button>
+                                </div>
+                                <div class="login-form">
+                                    <div>
+                                        <label for="username" class="details">Username</label>
+                                        <div class="inputs">
+                                            <span class="bi bi-person"></span>
+                                            <input type="text" class="username" id="username"
+                                                placeholder="Enter your username" required aria-label="Username">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="password" class="details">Password</label>
+                                        <div class="inputs">
+                                            <span class="bi bi-lock"></span>
+                                            <input type="password" class="password" id="password"
+                                                placeholder="Enter your password" required aria-label="Password">
+                                        </div>
+                                        <div class="forgot">
+                                            <span><a href="">Forgot Password?</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="login-btm">
+                                        <button class="form-btn" data-bs-dismiss="modal"
+                                            onclick="logIn(event)">Login</button>
+                                    </div>
+                                </div>
+                                <div class="md-footer">
+                                    <div class="reg">If you don't have an account, register here.</div>
+                                    <span><a href="#" data-bs-target="#signup" data-bs-toggle="modal"
+                                            class="create-acct">Create an Account</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sign Up Modal -->
+                <div class="modal fade" id="signup">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body md-body-signin">
+                                <div class="d-flex">
+                                    <div class="signup-title">Sign Up</div>
+                                    <button data-bs-dismiss="modal" class="btn btn-close"></button>
+                                </div>
+                                <div class="signin-form">
+                                    <div>
+                                        <label for="name" class="details">Enter your name</label>
+                                        <div class="inputs">
+                                            <input type="text" class="name" placeholder="Enter your name" required
+                                                aria-label="Name">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="email" class="details">Enter your email</label>
+                                        <div class="inputs">
+                                            <input type="email" class="email" placeholder="Enter your email" required
+                                                aria-label="Email">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="number" class="details">Enter your mobile number</label>
+                                        <div class="inputs">
+                                            <input type="number" class="number" placeholder="Mobile number" required
+                                                aria-label="Mobile Number">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="input-username" class="details">Enter your username</label>
+                                        <div class="inputs">
+                                            <input type="text" id="input-username" class="username"
+                                                placeholder="Enter your username" required aria-label="Username">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="input-password" class="details">Password</label>
+                                        <div class="inputs">
+                                            <span class="bi bi-lock"></span>
+                                            <input type="password" class="password" id="input-password"
+                                                placeholder="Enter your password" required aria-label="Password">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="confirm-password" class="details">Confirm Password</label>
+                                        <div class="inputs">
+                                            <span class="bi bi-lock"></span>
+                                            <input type="password" class="confirm-password" id="confirm-password"
+                                                placeholder="Confirm password" required aria-label="Confirm Password">
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="signup-btm">
+                                            <button class="form-btn" onclick="signUp(event)"
+                                                data-bs-dismiss="modal">Sign Up</button>
+                                        </div>
+                                    </div>
+                                    <div class="md-footer">
+                                        <div class="reg">If you have already an account.</div>
+                                        <span><a href="#" data-bs-target="#signin" data-bs-toggle="modal"
+                                                class="create-acct">Log In your Account</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select-lang">
+                <select name="lang" id="lang">
+                    <option value="english">
+                        English</option>
+                    <option value="">Hindi</option>
+                </select>
+            </div>
+        </div>
+        </div>
+        <div class="buttom-header-div d-flex justify-content-between">
+            <div>
+                <div class="d-flex">
+                    <span>
+                        <img src="../Public/image/nsp-logo.png" alt="">
+                    </span>
+                    <button data-bs-toggle="offcanvas" data-bs-target="#sidebar" class="side-option">
+                        <div class="bi bi-justify fs-1"></div>
+                    </button>
+                    <div class="offcanvas offcanvas-start" id="sidebar">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title">Scholarship</h5>
+                            <button class="btn btn-close btn close-white" data-bs-dismiss="offcanvas"></button>
+                        </div>
+                        <div class="offcanvas-body off-body">
+                            <div class="student-option">
+                                <div>
+                                    <span class="bi bi-mortarboard"></span>
+                                    <span class="side-option-heading">Students</span>
+                                </div>
+                                <div class="ps-4">
+                                    <div class="std-content content">Apply for one time Registratioin</div>
+                                    <div class="std-content content">Apply for Scholarship</div>
+                                    <div class="std-content content">Registration</div>
+                                    <div class="std-content content">Scheme on NSP</div>
+                                    <div class="std-content content">Track Your Payment</div>
+                                    <div class="std-content content">Check OTR details</div>
+                                </div>
+                            </div>
+                            <div class="institute-option">
+                                <div>
+                                    <span class="bi bi-houses"></span>
+                                    <span class="side-option-heading">Institutes</span>
+                                </div>
+                                <div class="ps-4">
+                                    <div class="inst-content content">How to fill Registration Form</div>
+                                    <div class="inst-content content">Registration Form</div>
+                                    <div class="inst-content content">Login</div>
+                                    <div class="inst-content content">Know your Aishe code</div>
+                                    <div class="inst-content content">Track Your Payment</div>
+                                    <div class="inst-content content">Check OTR details</div>
+                                </div>
+                            </div>
+                            <div class="officer-option">
+                                <div>
+                                    <span class="bi bi-person-gear"></span>
+                                    <span class="side-option-heading">Officers</span>
+                                </div>
+                                <div class="ps-4">
+                                    <div class="off-content content">Login</div>
+                                    <div class="off-content content">Nodal Officers (Scheme-wise)</div>
+                                    <div class="off-content content">Grivance Redressal Officers</div>
+                                </div>
+                            </div>
+                            <div class="public-option">
+                                <div>
+                                    <span class="bi bi-people"></span>
+                                    <span class="side-option-heading">Public</span>
+                                </div>
+                                <div class="ps-4">
+                                    <div class="pub-content content">Dashboard</div>
+                                    <div class="pub-content content">Find Institute on NSP</div>
+                                    <div class="pub-content content">Scholaship Eligibility</div>
+                                    <div class="pub-content content">Know your Aishe code</div>
+                                    <div class="pub-content content">Track Your Payment</div>
+                                    <div class="pub-content content">Check OTR details</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ms-5 fw-bold">Academic Year 2024-25</div>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" data-bs-target="#nav-menu" data-bs-toggle="collapse">
+                        <span class="bi bi bi-justify bg-dark"></span>
+                    </button>
+                    <div class="navbar-collapse collapse" id="nav-menu">
+                        <ul class="navbar-nav">
+                            <li class="ms-4 fw-bold nav-item">FAQs<span class="bi bi-chat-left ms-2 fs-5"></span></li>
+                            <li class="ms-4 fw-bold nav-item">Announcements<span class="bi bi-bell ms-2 fs-5"></span>
+                            </li>
+                            <li class="ms-4 fw-bold nav-item">Helpdesk<span class="bi bi-headset ms-2 fs-5"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <main>
+            <div class="carousel slide carousel-img" data-bs-ride="carousel" data-bs-theme="dark" id="schl-temp">
+                <div class="carrousel-inner banner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="../Public/image/nsp.png" height="200px" width="100%" alt="">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="../Public/image/nsp1.jpg" height="200px" width="100%" alt="">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="../Public/image/nsp2.png" height="200px" width="100%" alt="">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="../Public/image/nsp3.png" height="200px" width="100%" alt="">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#schl-temp">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#schl-temp">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button class="active" data-bs-slide-to="0" data-bs-target="#schl-temp"></button>
+                    <button data-bs-slide-to="1" data-bs-target="#schl-temp"></button>
+                    <button data-bs-slide-to="2" data-bs-target="#schl-temp"></button>
+                    <button data-bs-slide-to="3" data-bs-target="#schl-temp"></button>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between boxes">
+                <div class="students">
+                    <div class="inside-div">
+                        <span class="bi bi-mortarboard"></span>
+                        <span>Students</span>
+                    </div>
+                </div>
+                <div class="institution">
+                    <div class="inside-div">
+                        <span class="bi bi-houses"></span>
+                        <span>Institution</span>
+                    </div>
+                </div>
+                <div class="officers">
+                    <div class="inside-div">
+                        <span class="bi bi-person-lines-fill"></span>
+                        <span>Officers</span>
+                    </div>
+                </div>
+                <div class="public">
+                    <div class="inside-div">
+                        <span class="bi bi-people-fill"></span>
+                        <span>Public</span>
+                    </div>
+                </div>
+            </div>
+            <div class="notification-div">
+                <div class="Announcements">
+                    <div>
+                        <img src="../Public/image/Announcements-color.svg" alt="" width="120px" height="170px">
+                    </div>
+                    <div class="notification-title">Announcements</div>
+                    <div class="announce-box">
+                        <div class="animation">
+                            <div class="para1">
+                                Dear Student , if you are getting error 904 while doing face authentication, kindly
+                                update
+                                UIDAI AadhaarFACERD App from PlayStore.
+                            </div>
+                            <div class="para2">
+                                It has been observed in some cases that student’s / parent’s / legal guardian’s face
+                                authentication for generation of OTR is getting failed as they (Aadhaar Holder) have
+                                locked
+                                the biometrics for authentication in their Aadhaar. In such cases students / parents /
+                                legal
+                                guardians are advised to check their Biometric Lock / Unlock status by using mAadhaar
+                                mobile
+                                app or My Aadhaar web portal. Before proceeding for face authentication through NSP OTR
+                                app,
+                                kindly ensure that the Biometric Lock / Unlock status should be as “Unlocked” for
+                                authentication in Aadhaar. To lock or unlock the Biometric in Aadhaar, please click on
+                                the
+                                “Lock/Unlock Aadhaar” option on myAdhaar web portal(please refer to the link:
+                            </div>
+                            <div class="para3">
+                                Scholarship Application Fresh & Renewal is open for AY 2024-25
+                            </div>
+                            <div class="para4">
+                                The Portal is open for One Time Registration(OTR) for students.Apply now
+                            </div>
+                            <div class="para5">
+                                One Time Registration (OTR) is a unique number allotted to the student and is applicable
+                                for
+                                entire academic career on National Scholarship Portal.ee
+                            </div>
+                            <div class="para6">
+                                OTR is required to apply for the scholarships on National Scholarship Portal from AY
+                                2024-25.
+                            </div>
+                            <div class="para7">
+                                The students who have applied on National Scholarship Portal in AY 2023-24 will be
+                                allotted
+                                the OTR/Reference number through the portal and intimated through SMS. For more details
+                                please Click here.
+                            </div>
+                            <div class="d-flex para8">
+                                <div>
+                                    NSP OTR App is available on Google Play Store
+                                </div>
+                                <div>
+                                    <img src="../Public/image/google-play.png" alt="" height="40px" width="130px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="getOTR">
+                    <div>
+                        <img src="../Public/image/otr.svg" alt="" width="130px" height="130px">
+                    </div>
+                    <div class="notification-title">
+                        Get your OTR
+                    </div>
+                    <div class="getotr-box">
+                        One Time Registration (OTR) is a unique 14-digit number issued based on the Aadhaar/Aadhaar
+                        Enrolment ID (EID) and is applicable for the entire academic career of the student.
+                        <br><br>
+                        OTR simplifies the scholarship application process, thereby eliminating the need of registration
+                        in each academic year.
+                        <br><br>
+                        OTR is required to apply for scholarship on National Scholarship Portal.
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+    <footer>
+        <div class="footer-imgs d-flex">
+            <img src="../Public/image/meity.png" alt="" width="150px" height="75px">
+            <img src="../Public/image/nic.png" alt="" width="150px" height="75px">
+            <img src="../Public/image/mygov.png" class="color-img" alt="" width="150px" height="75px">
+            <img src="../Public/image/DBT.png" class="color-img" alt="" width="150px" height="75px">
+            <img src="../Public/image/indiagov.png" class="color-img" alt="" width="150px" height="75px">
+
+        </div>
+        <div class="footer-line">
+            Last update on 1 Nov 2024
+        </div>
+    </footer>
+</body>
+
+</html>

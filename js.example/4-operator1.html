@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ApplyClick() {
+            var count = 0
+            var courseName = "";
+            var totalfees = 0
+            document.querySelector("p").innerHTML = "";
+            var courses = document.getElementsByName("course");
+            for (var course of courses) {
+                if (course.checked) {
+                    courseName += course.value + "<br>";
+                    totalfees += parseInt(course.id);
+                    count++;
+                }
+            }
+            document.querySelector("p").innerHTML = "selected course: <br>" + courseName + "<br>Total count:" + count + "<br> Total fees :" + totalfees;
+        }
+    </script>
+</head>
+
+<body>
+    <ul style="list-style: none;">
+        <li><input type="checkbox" id="3000" name="course" value="java"> <label>java</label> </li>
+        <li><input type="checkbox" id="5000" name="course" value="pythan"> <label>pythan</label> </li>
+        <li><input type="checkbox" id="7000" name="course" value="ui"> <label>ui</label> </li>
+        <li><input type="checkbox" id="8000" name="course" value="react"> <label>react</label> </li>
+        <li><input type="checkbox" id="9000" name="course" value=".net"> <label>.net</label> </li>
+    </ul>
+    <button onclick="ApplyClick()">Apply</button>
+    <p></p>
+</body>
+
+</html>

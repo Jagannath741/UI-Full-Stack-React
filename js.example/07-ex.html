@@ -1,0 +1,13 @@
+<script>
+    function outer(){
+        var x=10
+        function inner(){
+            var y=40;
+            var m=20
+            var z=x+y+m;
+            document.write(`z=${z}`);
+        }
+        inner()
+    }
+    outer()
+</script>

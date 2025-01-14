@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function LoginClick() {
+            var userName = document.getElementById("txtName").value;
+            var password = document.getElementById("txtPwd").value;
+            var msg = document.getElementById("msg");
+
+            if (userName === " ") {
+                msg.innerHTML = "User Name Required".fontcolor('red');
+            } else {
+                if (userName === "john_123") {
+                    if (password === ("john123")) {
+                        document.write("<h2>Login success</h2>");
+                    } else {
+                        msg.innerHTML = "invalid password".fontcolor('red');
+                    }
+                } else {
+                    msg.innerHTML = "invalid user name".fontcolor('red');
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>User Name</h3>
+    <dl>
+        <dt>User name</dt>
+        <dd><input type="text" id="txtName"></dd>
+        <dt>Password</dt>
+        <dd><input type="password" id="txtPwd"></dd>
+    </dl>
+    <button onclick="LoginClick()">Login</button>
+    <p align="center" id="msg"></p>
+</body>
+
+</html>

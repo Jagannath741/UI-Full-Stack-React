@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INOX Movies</title>
+    <link rel="shurtcut icon" href="../Public/image/Inox_BALL.png">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <script>
+        function bookclick() {
+            document.getElementById("btnBooking").style.display = "none";
+            document.getElementById("summarycontainer").style.display = "block";
+
+            moviename = document.getElementById("lstmovie").value;
+            document.getElementById("lblmovie").innerHTML = moviename;
+
+            if (moviename == "THE GREATEST OF ALL TIME") {
+                document.getElementById("imgposter").src = "../public/image/inox1.png";
+            } else {
+                document.getElementById("imgposter").src = "../public/image/inox2.png";
+                document.getElementById("imgposter").src = "../public/image/inox3.png";
+
+            }
+
+            document.getElementById("lbldate").innerHTML = document.getElementById("lstdate").value;
+            document.getElementById("lblcinema").innerHTML = document.getElementById("lstcinema").value;
+            document.getElementById("lbltime").innerHTML = document.getElementById("lsttime").value;
+        }
+        function modifyclick() {
+            document.getElementById("lblbooking").innerHTML = "modifyclick";
+            document.getElementById("btnbook").innerHTML = "Save";
+            document.getElementById("btnbook").className = "btn btn-success";
+        }
+    </script>
+</head>
+
+<body class="container-fluid">
+    <button data-bs-target="#booking" id="btnBooking" data-bs-toggle="modal" class="btn btn-primary mt-2">Quick
+        Booking</button>
+    <div class="modal fade" id="booking">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="lblbooking">Quick Booking</h2>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <nav class="p-2 d-flex justify-content-evenly">
+                        <div class="bg-info">
+                            <select class="form-select" id="lstmovie">
+                                <option>Select Movie</option>
+                                <option>THE GREATEST OF ALL TIME</option>
+                                <option>STREE 2 SARKATE KA AATANK</option>
+                                <option>35-CHINNA KATHA KADHU</option>
+                            </select>
+                        </div>
+                        <div class="bg-info">
+                            <select class="form-select" id="lstdate">
+                                <option>Select Date</option>
+                                <option>Today , 10 sep</option>
+                                <option>Tomorrow , 11 sep</option>
+                                <option>12 sep</option>
+                            </select>
+                        </div>
+                        <div class="bg-info">
+                            <select class="form-select" id="lstcinema">
+                                <option>Select Cinema</option>
+                                <option>PVR Musarambagh - Hyderabad</option>
+                                <option>INOX Maheshwari Parmeshwari Mall,Kachiguda Hyderabad</option>
+                                <option>INOX Sattva Necklace Mall, Kavadiguda Hyderabad</option>
+                                <option>PVR IRRUM MANZIL Hyderabad</option>
+                            </select>
+                        </div>
+                        <div class="bg-info">
+                            <select class="form-select" id="lsttime">
+                                <option>Select Timing</option>
+                                <option>10:20 AM Telugu</option>
+                                <option>01:25 PM Telugu</option>
+                                <option>04:30 PM Telugu</option>
+                                <option>07:45 PM Telugu</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button onclick="bookclick()" id="btnbook" data-bs-dismiss="modal" class="btn btn-secondary"
+                                style="background-color: rgba(232, 190, 4, 0.977); color: black;">Book</button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4" style="width:250px; display: none;" id="summarycontainer">
+        <dl class="row">
+            <h4 class="bg-dark text-white p-2 bi bi-ticket">Booking Summary</h4>
+            <img width="250" height="300" id="imgposter">
+            <dt class="col-3">Movie</dt>
+            <dd class="col-9" id="lblmovie"></dd>
+            <dt class="col-3">Date</dt>
+            <dd class="col-9" id="lbldate"></dd>
+            <dt class="col-3">Cinema</dt>
+            <dd class="col-9" id="lblcinema"></dd>
+            <dt class="col-3">Time</dt>
+            <dd class="col-9" id="lbltime"></dd>
+        </dl>
+        <div onclick="modifyclick()" data-bs-target="#booking" data-bs-toggle="modal"
+            class="btn btn-warning bi bi-pen-fill" style="width: 250px;">Modify Booking</div>
+    </div>
+</body>
+
+</html>

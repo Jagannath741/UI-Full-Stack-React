@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        var categories = ["All", "Fashion", "Footwear", "Electronices"]
+
+        function GenerateClick() {
+
+            document.querySelector("ol").innerHTML = " ";
+            document.querySelector("select").innerHTML = " ";
+
+            categories.map(function (categories) {
+                var li = document.createElement("li");
+                li.innerHTML = categories;
+                document.querySelector("ol").appendChild(li);
+            })
+            categories.map(function (categories) {
+                var option = document.createElement("option");
+                option.text = categories;
+                option.value = categories;
+                document.querySelector("select").appendChild(option);
+
+                var span = document.createElement("span");
+                span.innerHTML = `<a href = #${categories}>${categories}</a>`;
+                document.querySelector("nav").appendChild(span);
+
+                var ul_il=document.createElement("li");
+
+                var input = document.createElement("input");
+                input.type = "checkbox";
+                input.value = categories;
+
+                var label = document.createElement("label");
+                label.innerHTML = categories;
+
+                ul_il.appendChild(input);
+                ul_il.appendChild(label);
+
+                document.querySelector("ul").appendChild(ul_il);
+
+            })
+        }
+
+
+    </script>
+    <style>
+        nav span {
+            margin: 0px 20px 0px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="GenerateClick()">Generate</button>
+    <ol>
+
+    </ol>
+    <select>
+
+    </select>
+    <br><br>
+    <nav>
+
+    </nav>
+    <ul style="list-style: none;">
+
+    </ul>
+</body>
+
+</html>

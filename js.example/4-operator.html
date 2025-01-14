@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var xposition = 10
+        function moveClick(){
+            xposition += 10
+            document.querySelector("img").style.marginLeft = xposition + "px";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="moveClick()">MOve click</button>
+    <br><br>
+    <img src="../Public/image/a1.jpg" width="100px">
+</body>
+</html>

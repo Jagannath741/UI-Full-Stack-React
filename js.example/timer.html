@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function msg1(){
+            document.querySelector("h1").innerHTML = "Volume 10%";
+        }
+        function msg2(){
+            document.querySelector("h1").innerHTML = "Volume 50%";
+        }
+        function msg3(){
+            document.querySelector("h1").innerHTML = "Volume 100%";
+        }
+        var m2;
+        function IncreaseClick(){
+            setTimeout(msg1,3000);
+            m2 = setTimeout(msg2,8000);
+            setTimeout(msg3,14000);
+        }
+        function CancelClick(){
+            clearTimeout(m2);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="IncreaseClick()">Increase Volume</button>
+    <button onclick="CancelClick()">Cancel 50%</button>
+    <h1 align="center"></h1>
+</body>
+</html>

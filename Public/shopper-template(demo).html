@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopper</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        header{
+            font-size: 22px;
+            font-family: Segoe UI;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .brand-title{
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .main-nav span{
+            font-size: 15px;
+            padding-right: 20px;
+            font-family: Arial;
+            font-weight: bold;
+        }
+        .main-nav span:hover{
+            color: red;
+            cursor: pointer;
+        }
+        .shortcut-nav span{
+            padding-right: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .shortcut-nav span:hover{
+            color: red;
+            cursor: pointer;
+        }
+        .bi-cart{
+            position: relative;
+        }
+        .cart-num{
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            font-size: 10px;
+            position: absolute;
+            text-align: center;
+            right: -1px;
+            top:-1px
+        }
+        section{
+            padding: 5px;
+        }
+        article{
+            font-size: 20px;
+            font-family: Segeo UI;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+
+        }
+        .bi-lightning-fill{
+            color: gold;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            margin-top: 5px;
+            height: 600px;
+        }
+        .women-fashion{
+            background-image: url("./images/women-fashion.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            position: relative;
+            align-items: center;
+            opacity: 0.8;
+            grid-row: 1;
+            grid-column: 2;
+        }
+        .men-fashion{
+            background-image: url("./images/men-fashion.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            position: relative;
+            align-items: center;
+            opacity: 0.8;
+            grid-row: 1;
+            grid-column: 1;
+
+        }
+        .kids-fashion{
+            background-image: url("./images/kids-fashion.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            position: relative;
+            align-items: center;
+            opacity: 0.8;
+        }
+    
+        .main-title{
+            font-size: 30px;
+            font-weight: bold;
+            font-family: Segoe UI;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+        }
+        .btn-shop{
+            font-size: 15px;
+            font-weight: bold;
+            font-family: Segoe UI;
+            padding: 15px; 
+            width: 160px;
+            text-align: center;           
+            color: black;
+            background-color: white;
+        }
+        .women-fashion:hover, .kids-fashion:hover, .men-fashion:hover{
+            opacity: 1;
+        }
+        .women-fashion:hover span, .kids-fashion:hover span, .men-fashion:hover span{
+            transform: translateX(5px);
+            cursor: pointer;
+        }
+        .arrow-1{
+            position: absolute;
+            top: 72.5%;
+            right: 37%;
+        }
+
+
+
+
+        .card-1{
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+        .pr-1:hover ,.pr-4:hover{
+            transform: translateX(-10px);
+        }
+        .card-1:hover .arrow-2{
+            transform: translateX(10px);
+        }
+        .card-2{
+            width: 700px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            color: black;
+        }
+        .pr-2:hover ,.pr-3:hover{
+            transform: translateX(-10px);
+        }
+        .card-2:hover .arrow-3{
+            transform: translateX(10px);
+        }
+
+        .pr-1{
+            width: 410px;
+            height: 400px;
+            padding: 10px;
+            background-image: url(./images/p-1.jpg);
+            background-size: cover;
+        }
+        .pr-2{
+            width: 710px;
+            height: 400px;
+            padding: 10px; 
+            background-image: url(./images/p-2.jpg);
+            background-size: cover;
+        }
+        .pr-3{
+            width: 710px;
+            height: 400px;  
+            padding: 10px;          
+            background-image: url(./images/p-3.jpg);
+            background-size: cover;
+        }
+        .pr-4{
+            width: 410px;
+            height: 400px;
+            padding: 10px;
+            background-image: url(./images/p-4.jpg);
+            background-size: cover;
+        }
+        .nav-2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-2 a{
+            color: black;
+            text-decoration: none;
+        }
+        .nav-2 a:hover{
+            color: red;
+            text-decoration: underline;
+        }
+        .card{
+            width: 250px;
+            height: 270px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 0px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .pr-5{
+            width: 250px;
+            height: 270px;
+            background-image: url(./images/p-5.jpg);
+            background-size: cover;
+            transition: 600ms;
+        }
+        .pr-5:hover{
+            background-image: url(./images/h-5.jpg);
+            background-size: cover;
+            transition: 600ms;
+        }
+        .pr-5:hover .shortcut-nav2, .pr-6:hover .shortcut-nav2, .pr-7:hover .shortcut-nav2, .pr-8:hover .shortcut-nav2, .pr-9:hover .shortcut-nav2, .pr-10:hover .shortcut-nav2, .pr-11:hover .shortcut-nav2, .pr-12:hover .shortcut-nav2{
+            transform: translateY(-20px);
+            transition: 650ms;
+        }
+        .shortcut-nav2{
+            display: flex;
+            justify-content: center;
+            transform: translateY(40px);
+            position: absolute;
+            bottom: 0px;
+            right: 60px;
+            translate: 650ms;
+        }
+        .shortcut-nav2 span{
+            display: inline-block;
+            background-color: white;
+            color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+        }
+        .shortcut-nav2 span:hover{
+            background-color: red;
+            color: white;
+        }
+        .pr-6{
+            width: 250px;
+            height: 270px;
+            background-image: url(./images/p-6.jpg);
+            background-size: cover;
+            transition: 600ms;
+        }
+        .pr-6:hover{
+            background-image: url(./images/h-6.jpg);
+            background-size: cover;
+            transition: 600ms;
+        }
+        .pr-7{
+            width: 250px;
+            height: 270px;
+            background-image: url(./images/p-7.jpg);
+            background-size: cover;
+            transition: 600ms;
+        }
+        .pr-7:hover{
+            background-image: url(./images/h-7.jpg);
+            background-size: cover;
+            transition: 600ms;
+        }
+        .pr-8{
+            width: 250px;
+            height: 270px;
+            background-image: url(./images/p-8.jpg);
+            background-size: cover;
+            transition: 600ms;
+        }
+        .pr-9{
+            width: 250px;
+            height: 270px;
+            background-image: url(./images/p-9.jpg);
+            background-size: cover;
+            transition: 600ms;
+        }
+        .pr-10{
+            width: 250px;
+            height: 270px;
+            background-image: url(./images/p-10.jpg);
+            background-size: cover;
+            transition: 600ms;
+        }
+        .pr-10:hover{
+            background-image: url(./images/h-10.jpg);
+            background-size: cover;
+            transition: 600ms;
+        }
+        .pr-11{
+            width: 250px;
+            height: 270px;
+            background-image: url(./images/p-11.jpg);
+            background-size: cover;
+            transition: 600ms;
+        }
+        .pr-11:hover{
+            background-image: url(./images/h-11.jpg);
+            background-size: cover;
+            transition: 600ms;
+        }
+        .pr-12{
+            width: 250px;
+            height: 270px;
+            background-image: url(./images/p-12.jpg);
+            background-size: cover;
+            transition: 600ms;
+        }
+        .discover a{
+            text-decoration: none;
+            color: black;
+        }
+        .dis-border{
+            margin-left: 45%;
+            width: 120px;
+            overflow: hidden;
+        }
+        .dis-border:hover .discovery-border{
+            transform: translateX(160px);
+            transition: 400ms;
+        }
+        .discovery-border{
+            transform: translateX(-40px);
+            transition: 400ms;
+        }
+        .cover-img{
+            background-image: url(./images/Shoppercover-4.jpg);
+            background-size: cover;
+            height: 600px;
+        }
+        .base-pro{
+            width: 200px;
+        }
+        .base-pro:hover{
+            opacity: 0.8;
+        }
+        .likes-comment{
+            opacity: 0;
+        }
+        .base-pro:hover .likes-comment{
+            opacity: 1.2;
+            text-shadow: 2px 2px 10px black;
+        }
+
+
+
+
+
+
+
+
+        footer{
+            font-family: Segoe UI;
+            font-size: 16px;
+            background-color: black;
+            color: white;
+            padding: 30px;
+        }
+        .row-1{
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 70px;
+            padding-bottom: 40px;
+        }
+        .row-2{
+            
+            text-align: center;
+            padding-bottom: 70px;
+            
+            
+        }
+        .email{
+            border-radius: 1px;
+            padding: 15px;
+            font-size: 15px;
+            display: inline-block;
+            width: 300px;
+            text-align: left;
+            opacity: 0.4;
+            
+            box-shadow: 1px 1px 1px gray;
+            color: white;
+        }
+        .sub{
+            border-radius: 1px;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            display: inline-block;
+            width: 150px;
+            background-color: grey;
+            margin-left: 10px;
+            opacity: 0.5;
+            
+        }
+        .sub:hover{
+            opacity: 1;
+        }
+        .row-3{
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            padding: 30px;
+        }
+        .col span{
+            display: block;
+            padding: 5px;
+
+        }
+        .col-2 aside{
+            display: block;
+            color: gray;
+            padding: 7px;
+        }
+        .shopper{
+            font-weight: bold;
+            font-size: 31px;
+        }
+        .diff-1{
+            color: white;
+        }
+        .diff-2{
+            color: gray;
+        }
+        .border{
+            border: 0.1px solid gray;
+            margin-bottom: 20px;
+        }
+        .row-4{
+            display: flex;
+            justify-content: space-around;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+        <div class="brand-title">
+            <span>Shopper.</span>
+        </div>
+    
+        <div>
+            <nav class="main-nav">
+                <span>Home</span>
+                <span>Catalog</span>
+                <span>Shop</span>
+                <span>Pages</span>
+                <span>Blog</span>
+                <span>Docs</span>
+            </nav>
+        </div>
+    
+        <div>
+            <nav class="shortcut-nav">
+                <span class="bi bi-search mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-1"></span>
+                <span class="bi bi-person mx-1"></span>
+                <span class="bi bi-heart mx-1"></span>
+                <span class="bi bi-cart mx-1">
+                    <badge class="cart-num bg-danger text-white">2</badge>
+                </span>
+            </nav>    
+        </div>
+
+    </header>
+    <div class="offcanvas offcanvas-end" id="offcanvas-1">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasLabel">Search</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body border-top border-2">
+          <div class="mt-3">
+            <select name="cars" class="p-2" id="cars" style="width: 100%; height: 40px;">
+                <option value="catagories">All Catagories</option>
+                <option value="men">Men</option>
+                <option value="women">Women</option>
+                <option value="kids">Kids</option>
+              </select>
+          </div>
+          <div class="input-group mt-4">
+            <input type="text" class="form-control p-2" style="width: 50%;" placeholder="Search">
+            <span class="bi bi-search input-group-text"></span>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+    <section>
+        <article>
+            <div>
+                <span class="bi bi-lightning-fill"></span>
+            </div>
+            <div>
+                <span class="fs-6">HAPPY HOLIDAY DEALS ON EVERYTHING</span>
+            </div>
+            <div>
+                <span class="bi bi-lightning-fill"></span>
+            </div>
+        </article>
+        <main>
+            <div class="women-fashion">
+                <div class="main-title">Women</div>
+                <div class="btn-shop"><span>Shop women</span></div>
+                <span class="bi bi-arrow-right ms-2 arrow-1"></span>
+            </div>
+            <div class="men-fashion">
+                <div class="main-title">Men</div>
+                <div class="btn-shop"><span>Shop Men</span></div>
+                <span class="bi bi-arrow-right arrow-1"></span>
+            </div>
+            <div class="kids-fashion">
+                <div class="main-title">Kids</div>
+                <div class="btn-shop"><span>Shop Kids</span></div>
+                <span class="bi bi-arrow-right arrow-1"></span>
+            </div>
+        </main>
+
+        <div class="container-fluid" style="font-size: 14px; margin-top: 5%;">
+            <div class="d-flex justify-content-center align-items-center w-100 my-4">
+                <div class="d-flex justify-content-center align-items-center mx-1 p-1 ">
+                    <div class="mx-4">
+                        <span class="bi bi-truck fs-5 text-danger"></span>
+                    </div>
+                    <div>
+                        <div class="fw-bold">Free shipping</div>
+                        <div>From all orders over $100</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center mx1 p-1 ">
+                    <div class="mx-4">
+                        <span class="bi bi-arrow-counterclockwise fs-5 text-danger"></span>
+                    </div>
+                    <div>
+                        <div class="fw-bold">Free returns</div>
+                        <div>Return money within 30 days</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center mx-1 p-1 ">
+                    <div class="mx-4">
+                        <span class="bi bi-lock fs-5 text-danger"></span>
+                    </div>
+                    <div>
+                        <div class="fw-bold">Secure shopping</div>
+                        <div>You're in safe hands</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center mx-1 p-1">
+                    <div class="mx-4">
+                        <span class="bi bi-tag fs-5 text-danger"></span>
+                    </div>
+                    <div>
+                        <div class="fw-bold">Over 10,000 Styles</div>
+                        <div>We have everything you need</div>
+                    </div>
+                </div>
+            </div>
+            <div class=" border-top border-secondary mb-4" style="width: 1000px; margin-left: 18%;">
+
+            </div>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <div>
+                <div class="text-center fs-5 fw-bold text-secondary py-2">New Collection</div>
+                <div class="text-center fw-bold fs-1 py-2">Best Picks 2019</div>
+                <div class="text-center fs-6 py-2" style="font-family: jost;">
+                    <span class="text-center">Appear, dry there darkness they're seas, dry waters thing fly midst. Beast,</span><br>
+                    <span class="text-center"> above fly brought Very green.</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid d-flex justify-content-center align-items-center py-4 pt-4">
+            <div style="font-family: jost;">
+                <div class="row my-4">
+                    <div class="col">
+                        <div class="card-1">
+                            <div class="pr-1"></div>
+                            <div class="fs-2 fw-bold" style="position: absolute; top:30%; right: 30%;">Bags Collection</div>
+                            <div class="text-center fs-5 fw-bold" style="position: absolute; top:45%; right: 50%;">Shop Now</div>
+                            <span class="bi bi-arrow-right fs-5 fw-bold arrow-2" style="position: absolute; top:45%; right: 40%;"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-2">
+                            <div class="pr-2"></div>
+                            <div class="fs-2 fw-bold" style="position: absolute; top:30%; right: 65%;">Bags Collection</div>
+                            <div class="text-center fs-5 fw-bold" style="position: absolute; top:45%; right: 80%;">Shop Now</div>
+                            <span class="bi bi-arrow-right fs-5 fw-bold arrow-3" style="position: absolute; top:45%; right: 75%;"></span>
+                            <span class="offer bg-danger d-flex flex-column justify-content-center align-items-center" style="font-family: Arial; position: absolute; width: 100px; height: 100px; border-radius: 100px; top: 10px; right: 10px;">
+                                <span class="fs-6 text-white" >Save</span>
+                                <span class="fs-1 text-white" style="line-height: 20px;">30%</span>
+                            </span>
+                        </div>
+                    </div>              
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card-2">
+                            <div class="pr-3"></div>
+                            <div class="fs-2 fw-bold" style="position: absolute; top:30%; right: 65%;">Bags Collection</div>
+                            <div class="text-center fs-5 fw-bold" style="position: absolute; top:45%; right: 80%;">Shop Now</div>
+                            <span class="bi bi-arrow-right fs-5 fw-bold arrow-3" style="position: absolute; top:45%; right: 75%;"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-1">
+                            <div class="pr-4"></div>
+                            <div class="fs-2 fw-bold" style="position: absolute; top:30%; right: 30%;">Bags Collection</div>
+                            <div class="text-center fs-5 fw-bold" style="position: absolute; top:45%; right: 50%;">Shop Now</div>
+                            <span class="bi bi-arrow-right fs-5 fw-bold arrow-2" style="position: absolute; top:45%; right: 40%;"></span>
+                        </div>
+                    </div>             
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid my-4">
+            <div class="fs-2 fw-bold d-flex justify-content-center align-items-center" style="font-family: Arial;">Top month Sellers</div>
+            <div class="nav-2 my-4">
+                <span class="mx-4 fs-6"><a href="">Women</a></span>
+                <span class="mx-4 fs-6"><a href="">Men</a></span>
+                <span class="mx-4 fs-6"><a href="">Kids</a></span>
+            </div>
+            <div class="container-fluid w-100 d-flex justify-content-center align-items-center">
+                <div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="pr-5">
+                                    <span class="p-1 fs-6" style="position: absolute; background-color: white; color: black; top: 20px; width: 60px; height: 30px;">New</span>
+                                    <div class="shortcut-nav2">
+                                        <span class="bi bi-eye mx-2"></span>
+                                        <span class="bi bi-cart mx-2"></span>
+                                        <span class="bi bi-heart mx-2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-4" style="font-family: Arial;">
+                                <div class="text-secondary" style="font-size: 14px;">Shoes</div>
+                                <div class="fw-bold">Leather mid-heel Sandals</div>
+                                <div class="fs-6 fw-bold text-secondary">$129.00</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="pr-6">
+                                    <div class="shortcut-nav2">
+                                        <span class="bi bi-eye mx-2"></span>
+                                        <span class="bi bi-cart mx-2"></span>
+                                        <span class="bi bi-heart mx-2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-4" style="font-family: Arial;">
+                                <div class="text-secondary" style="font-size: 14px;">Dresses</div>
+                                <div class="fw-bold">Cotton floral print Dress</div>
+                                <div class="fs-6 fw-bold text-secondary">$40.00</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="pr-7">
+                                    <span class="p-1 fs-6" style="position: absolute; background-color: black; color: white; top: 20px; width: 60px; height: 30px;">Sale</span>
+                                    <div class="shortcut-nav2">
+                                        <span class="bi bi-eye mx-2"></span>
+                                        <span class="bi bi-cart mx-2"></span>
+                                        <span class="bi bi-heart mx-2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-4" style="font-family: Arial;">
+                                <div class="text-secondary" style="font-size: 14px;">Shoes</div>
+                                <div class="fw-bold">Leather Sneakers</div>
+                                <div class="d-flex">
+                                    <span class="fw-lighter"><strike class="text-secondary">$85.00</strike></span><span class="text-danger fs-6 fw-bold">$85.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="pr-8">
+                                    <div class="shortcut-nav2">
+                                        <span class="bi bi-eye mx-2"></span>
+                                        <span class="bi bi-cart mx-2"></span>
+                                        <span class="bi bi-heart mx-2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-4" style="font-family: Arial;">
+                                <div class="text-secondary" style="font-size: 14px;">Tops</div>
+                                <div class="fw-bold">Cropped cotton Top</div>
+                                <div class="fs-6 fw-bold text-secondary">$29.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="pr-9">
+                                    <div class="shortcut-nav2">
+                                        <span class="bi bi-eye mx-2"></span>
+                                        <span class="bi bi-cart mx-2"></span>
+                                        <span class="bi bi-heart mx-2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-4" style="font-family: Arial;">
+                                <div class="text-secondary" style="font-size: 14px;">Dresses</div>
+                                <div class="fw-bold">Floral print midi Dress</div>
+                                <div class="fs-6 fw-bold text-secondary">$50.00</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="pr-10">
+                                    <span class="p-1 fs-6" style="position: absolute; background-color: black; color: white; top: 20px; width: 60px; height: 30px;">Sale</span>
+                                    <div class="shortcut-nav2">
+                                        <span class="bi bi-eye mx-2"></span>
+                                        <span class="bi bi-cart mx-2"></span>
+                                        <span class="bi bi-heart mx-2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-4" style="font-family: Arial;">
+                                <div class="text-secondary" style="font-size: 14px;">Bags</div>
+                                <div class="fw-bold">Suede cross body Bag</div>
+                                <div class="d-flex">
+                                    <span class="fw-lighter"><strike class="text-secondary">$79.00</strike></span><span class="text-danger fs-6 fw-bold">$49.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="pr-11">
+                                    <div class="shortcut-nav2">
+                                        <span class="bi bi-eye mx-2"></span>
+                                        <span class="bi bi-cart mx-2"></span>
+                                        <span class="bi bi-heart mx-2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-4" style="font-family: Arial;">
+                                <div class="text-secondary" style="font-size: 14px;">Skirts</div>
+                                <div class="fw-bold">Printed A-line Skirt</div>
+                                <div class="fs-6 fw-bold text-secondary">$79.00</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="pr-12">
+                                    <span class="p-1 fs-6" style="position: absolute; background-color: white; color: black; top: 20px; width: 60px; height: 30px;">New</span>
+                                    <div class="shortcut-nav2">
+                                        <span class="bi bi-eye mx-2"></span>
+                                        <span class="bi bi-cart mx-2"></span>
+                                        <span class="bi bi-heart mx-2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-4" style="font-family: Arial;">
+                                <div class="text-secondary" style="font-size: 14px;">Shoes</div>
+                                <div class="fw-bold">Heel strappy Sandals</div>
+                                <div class="fs-6 fw-bold text-secondary">$90.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid py-4">
+            <div class="dis-border">
+                <div class="discover d-flex justify-content-center align-items-center"><a href="">Discover more</a></div>
+                <div class="border border-1 border-dark discovery-border" style="margin-left: 40%;width: 105px;"></div>
+            </div> 
+        </div>
+        <div class="position-relative">
+            <div class="cover-img"></div>
+            <div class="position-absolute fs-1 fw-bold" style="top: 25%;right: 32%;">Get -50% from</div>
+            <div class="position-absolute fs-2 fw-bold" style="top: 35%;right: 31.5%;">Summer Collection</div>
+            <div class="position-absolute fs-1 mt-4 fw-bold text-danger" style="top: 50%;right: 13.5%;"><span class="mx-4">480</span><span class="mx-4">:</span><span class="mx-4">10</span><span class="mx-4">:</span><span class="mx-4">58</span><span class="mx-4">:</span><span class="mx-4">42</span></div>
+            <div class="text-secondary position-absolute fs-6" style="top: 65%;right: 25%;"><span class="text-uppercase" style="margin-left: -60%;">days</span><span class="text-uppercase " style="margin-left: 50%;">hours</span><span class="text-uppercase" style="margin-left: 40%;">minutes</span><span class="text-uppercase" style="margin-left: 30%;">seconds</span></div>
+            <div></div>
+        </div>
+
+
+        <div class="d-flex flex-column justify-content-center align-items-center" style="margin-top: 8%;">
+            <div class="text-uppercase text-secondary" style="font-size: 14px; font-family: jost;">what buyers say</div>    
+            <div class="fs-2 fw-bold">Latest buyers Reviews</div>
+        </div>
+        <div class="container my-4">
+            <div class="row">
+                <div class="col">
+                    <div class="carousel my-4 carousel-dark" data-bs-ride="carousel" id="shop-slide">
+                        <div class="carousel-indicators" >
+                            <button type="button" data-bs-target="#shop-slide" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#shop-slide" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#shop-slide" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="d-flex">
+                                    <div class="mx-4">
+                                        <div class="single-box border border-1" style="width: 360px; height: 400px;">
+                                            <div class="img-area d-flex align-items-center">
+                                                <div class="m-4"><img src="./images/p-13.jpg" style="width: 100px; height: 100px;"></div>
+                                                <div class="m-4">
+                                                    <p class="fs-6 fw-bold text-secondary">Shoes</p>
+                                                    <p class="fw-bold" style="font-size: 15px;">Low top Sneakers</p>
+                                                    <div class="d-flex" style="margin-top: -20px;">
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: gainsboro;"></span>
+                                                        <span class="bi bi-star-fill" style="color: gainsboro;"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="img-text p-4 fw-light">
+                                                <p>From creepeth said moved given divide make multiply of him shall itself also above second doesn't unto created saying land herb sea midst night wherein.</p>
+                                                <p>Logan Edwards, 01 Jun 2019</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mx-4">
+                                        <div class="single-box border border-1" style="width: 360px; height: 400px;">
+                                            <div class="img-area d-flex align-items-center">
+                                                <div class="m-4"><img src="./images/p-14.jpg" style="width: 100px; height: 100px;"></div>
+                                                <div class="m-4">
+                                                    <p class="fs-6 fw-bold text-secondary">Dresses</p>
+                                                    <p class="fw-bold" style="font-size: 15px;">Cotton print Dress</p>
+                                                    <div class="d-flex" style="margin-top: -20px;">
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="img-text p-4 fw-light">
+                                                <p>God every fill great replenish darkness unto. Very open. Likeness their that light. Given under image to. Subdue of shall cattle day fish form saw spirit and given stars, us you whales may, land, saw fill unto.</p>
+                                                <p>Jane Jefferson, 29 May 2019</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mx-4">
+                                        <div class="single-box border border-1" style="width: 360px; height: 400px;">
+                                            <div class="img-area d-flex align-items-center">
+                                                <div class="m-4"><img src="./images/p-15.jpg" style="width: 100px; height: 100px;"></div>
+                                                <div class="m-4">
+                                                    <p class="fs-6 fw-bold text-secondary">T-shirts</p>
+                                                    <p class="fw-bold" style="font-size: 15px;">Oversized print T-shirt</p>
+                                                    <div class="d-flex" style="margin-top: -20px;">
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: gainsboro;"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="img-text p-4 fw-light">
+                                                <p>Fill his waters wherein signs likeness waters. Second light gathered appear sixth fourth, seasons behold creeping female.</p>
+                                                <p>Darrell Baker, 18 May 2019</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex">
+                                    <div class="mx-4">
+                                        <div class="single-box border border-1" style="width: 360px; height: 400px;">
+                                            <div class="img-area d-flex align-items-center">
+                                                <div class="m-4"><img src="./images/p-10.jpg" style="width: 100px; height: 100px;"></div>
+                                                <div class="m-4">
+                                                    <p class="fs-6 fw-bold text-secondary">Bags & Accessories</p>
+                                                    <p class="fw-bold" style="font-size: 15px;">Suede cross body Bag</p>
+                                                    <div class="d-flex" style="margin-top: -20px;">
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: gainsboro;"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="img-text p-4 fw-light">
+                                                <p>God every fill great replenish darkness unto. Very open. Likeness their that light. Given under image to. Subdue of shall cattle day fish form saw spirit and given stars.</p>
+                                                <p>Pavel Doe, 29 May 2019</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mx-4">
+                                        <div class="single-box border border-1" style="width: 360px; height: 400px;">
+                                            <div class="img-area d-flex align-items-center">
+                                                <div class="m-4"><img src="./images/p-14.jpg" style="width: 100px; height: 100px;"></div>
+                                                <div class="m-4">
+                                                    <p class="fs-6 fw-bold text-secondary">Dresses</p>
+                                                    <p class="fw-bold" style="font-size: 15px;">Cotton print Dress</p>
+                                                    <div class="d-flex" style="margin-top: -20px;">
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="img-text p-4 fw-light">
+                                                <p>God every fill great replenish darkness unto. Very open. Likeness their that light. Given under image to. Subdue of shall cattle day fish form saw spirit and given stars, us you whales may, land, saw fill unto.</p>
+                                                <p>Jane Jefferson, 29 May 2019</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mx-4">
+                                        <div class="single-box border border-1" style="width: 360px; height: 400px;">
+                                            <div class="img-area d-flex align-items-center">
+                                                <div class="m-4"><img src="./images/p-15.jpg" style="width: 100px; height: 100px;"></div>
+                                                <div class="m-4">
+                                                    <p class="fs-6 fw-bold text-secondary">T-shirts</p>
+                                                    <p class="fw-bold" style="font-size: 15px;">Oversized print T-shirt</p>
+                                                    <div class="d-flex" style="margin-top: -20px;">
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: gainsboro;"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="img-text p-4 fw-light">
+                                                <p>Fill his waters wherein signs likeness waters. Second light gathered appear sixth fourth, seasons behold creeping female.</p>
+                                                <p>Darrell Baker, 18 May 2019</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex">
+                                    <div class="mx-4">
+                                        <div class="single-box border border-1" style="width: 360px; height: 400px;">
+                                            <div class="img-area d-flex align-items-center">
+                                                <div class="m-4"><img src="./images/p-10.jpg" style="width: 100px; height: 100px;"></div>
+                                                <div class="m-4">
+                                                    <p class="fs-6 fw-bold text-secondary">Bags & Accessories</p>
+                                                    <p class="fw-bold" style="font-size: 15px;">Suede cross body Bag</p>
+                                                    <div class="d-flex" style="margin-top: -20px;">
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: gainsboro;"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="img-text p-4 fw-light">
+                                                <p>God every fill great replenish darkness unto. Very open. Likeness their that light. Given under image to. Subdue of shall cattle day fish form saw spirit and given stars.</p>
+                                                <p>Pavel Doe, 29 May 2019</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mx-4">
+                                        <div class="single-box border border-1" style="width: 360px; height: 400px;">
+                                            <div class="img-area d-flex align-items-center">
+                                                <div class="m-4"><img src="./images/p-13.jpg" style="width: 100px; height: 100px;"></div>
+                                                <div class="m-4">
+                                                    <p class="fs-6 fw-bold text-secondary">Shoes</p>
+                                                    <p class="fw-bold" style="font-size: 15px;">Low top Sneakers</p>
+                                                    <div class="d-flex" style="margin-top: -20px;">
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: gainsboro;"></span>
+                                                        <span class="bi bi-star-fill" style="color: gainsboro;"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="img-text p-4 fw-light">
+                                                <p>From creepeth said moved given divide make multiply of him shall itself also above second doesn't unto created saying land herb sea midst night wherein.</p>
+                                                <p>Logan Edwards, 01 Jun 2019</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mx-4">
+                                        <div class="single-box border border-1" style="width: 360px; height: 400px;">
+                                            <div class="img-area d-flex align-items-center">
+                                                <div class="m-4"><img src="./images/p-15.jpg" style="width: 100px; height: 100px;"></div>
+                                                <div class="m-4">
+                                                    <p class="fs-6 fw-bold text-secondary">T-shirts</p>
+                                                    <p class="fw-bold" style="font-size: 15px;">Oversized print T-shirt</p>
+                                                    <div class="d-flex" style="margin-top: -20px;">
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                        <span class="bi bi-star-fill" style="color: goldenrod;"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="img-text p-4 fw-light">
+                                                <p>Fill his waters wherein signs likeness waters. Second light gathered appear sixth fourth, seasons behold creeping female.</p>
+                                                <p>Darrell Baker, 18 May 2019</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-center" style="background-color: gainsboro;">
+            <div>
+                <div style="margin-top: 10%;">
+                    <div class="fs-1 fw-bold text-center">@shopper</div>
+                    <div class="text-secondary fs-65 text-center" style="font-family: jost;">Appear, dry there darkness they're seas, dry waters.</div>
+                </div>
+                <div class="d-flex justify-content-center align-item-center" style="margin-top: 7%;">
+                    <div class="position-relative base-pro mx-2">
+                        <img src="./images/p-16.jpg" width="200px" height="200px">
+                        <div class="position-absolute likes-comment text-white" style="top: 50%; right: 35%;"><span class="bi bi-heart mx-2">248</span><span class="bi bi-chat-left">7</span></div>
+                    </div>
+                    <div class="position-relative base-pro mx-2">
+                        <img src="./images/p-17.jpg" width="200px" height="200px">
+                        <div class="position-absolute likes-comment text-white" style="top: 50%; right: 35%;"><span class="bi bi-heart mx-2">248</span><span class="bi bi-chat-left">7</span></div>
+                    </div>
+                    <div class="position-relative base-pro mx-2">
+                        <img src="./images/p-18.jpg" width="200px" height="200px">
+                        <div class="position-absolute likes-comment text-white" style="top: 50%; right: 35%;"><span class="bi bi-heart mx-2">248</span><span class="bi bi-chat-left">7</span></div>
+                    </div>
+                    <div class="position-relative base-pro mx-2">
+                        <img src="./images/p-19.jpg" width="200px" height="200px">
+                        <div class="position-absolute likes-comment text-white" style="top: 50%; right: 35%;"><span class="bi bi-heart mx-2">248</span><span class="bi bi-chat-left">7</span></div>
+                    </div>
+                    <div class="position-relative base-pro mx-2">
+                        <img src="./images/p-20.jpg" width="200px" height="200px">
+                        <div class="position-absolute likes-comment text-white" style="top: 50%; right: 35%;"><span class="bi bi-heart mx-2">248</span><span class="bi bi-chat-left">7</span></div>
+                    </div>
+                    <div class="position-relative base-pro mx-2">
+                        <img src="./images/p-21.jpg" width="200px" height="200px">
+                        <div class="position-absolute likes-comment text-white" style="top: 50%; right: 35%;"><span class="bi bi-heart mx-2">248</span><span class="bi bi-chat-left">7</span></div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-item-center" style="margin-top: 10px; margin-bottom: 5%;">
+                    <div class="position-relative mx-4">
+                        <img src="./images/shopper-mango.svg" width="140px" height="140px">
+                    </div>
+                    <div class="position-relative mx-4">
+                        <img src="./images/Shopper-zara.svg" width="140px" height="140px">
+                    </div>
+                    <div class="position-relative mx-4">
+                        <img src="./images/Shopper-reebok.svg" width="140px" height="140px">
+                    </div>
+                    <div class="position-relative mx-4">
+                        <img src="./images/Shopper-asos.svg" width="120px" height="140px">
+                    </div>
+                    <div class="position-relative mx-4">
+                        <img src="./images/Shopper-stradivarius.svg" width="140px" height="140px">
+                    </div>
+                    <div class="position-relative mx-4">
+                        <img src="./images/Shopper-adidas.svg" width="140px" height="140px">
+                    </div>
+                    <div class="position-relative mx-4">
+                        <img src="./images/Shopper-bershka.svg" width="140px" height="140px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="row-1">
+            <span>Want style Ideas and Treats?</span>
+        </div>
+        <div class="row-2">
+            <input type="email" class="email form-control"  placeholder="Enter Email*">
+            <input type="button" class="sub text-light" value="Subscribe">
+        </div>
+        <div class="row-3">
+            <div class="col-2">
+                <span class="shopper">Shopper.</span>
+                <aside class="d-flex fs-5">
+                    <span class="bi bi-facebook me-1"></span>
+                    <span class="bi bi-youtube mx-1"></span>
+                    <span class="bi bi-twitter mx-1"></span>
+                    <span class="bi bi-instagram mx-1"></span>
+                    <span class="bi bi-medium ms-1"></span>
+                </aside>
+            </div>
+            <div class="col">
+                <div class="diff-1"><span >SUPPORT</span></div>
+                <div class="diff-2">
+                    <span>Contact Us</span>
+                    <span>FAQs</span>
+                    <span>Size Guide</span>
+                    <span>Shipping & Returns</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="diff-1"><span>SHOP</span></div>
+                <div class="diff-2">
+                    <span>Men's Shopping</span>
+                    <span>Women's Shopping</span>
+                    <span>Kids' Shopping</span>
+                    <span>Discounts</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="diff-1"><span>COMPANY</span></div>
+                <div class="diff-2">
+                    <span>Our Story</span>
+                    <span>Careers</span>
+                    <span>Terms & Conditions</span>
+                    <span>Privacy & Cookie policy</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="diff-1"><span>CONTACT</span></div>
+                <div class="diff-2">
+                    <span>1-202-555-0105</span>
+                    <span>1-202-555-0106</span>
+                    <span>help@shopper.com</span>
+                </div>
+            </div>
+        </div>
+        <div class="border"></div>
+        <div class="row-4">
+            <div><span>&copy; 2019 All rights reserved. Designed by Unvab.</span></div>
+            <div>
+                <img src="./images/flipkart-footer.jpg" width="100%">
+            </div>
+
+        </div>
+    </footer>
+   
+
+    
+</body>
+</html>

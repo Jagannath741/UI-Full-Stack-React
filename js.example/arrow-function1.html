@@ -1,0 +1,18 @@
+<script>
+    /*fetch(`https://fakestoreapi.com/products`)
+    .then(function(responce){
+        return responce.json()
+    })
+    .then(function(products){
+        products.map(function(products){
+            document.write(`<li>${products.title}</li>`)
+        })
+    })*/
+    fetch(`https://fakestoreapi.com/products`)
+    .then(responce=>responce.json())
+    .then(products=>{
+        products.map(products=>{
+            document.write(`<li>${products.title}</li>`);
+        })
+    })
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../data/help.txt">
+    <script>
+        function LoadClick() {
+
+            fetch("../data/help.txt")
+                 .then(response=>response.text())
+    
+                .then(function (data) {
+                    document.querySelector("pre").innerHTML = data;
+                })
+                .catch(function (error) {
+                    console.log(error);
+                })
+                .finally(function () {
+                    console.log("Request Completed..");
+                })
+
+        }
+    </script>
+</head>
+
+<body onclick="bodyload()">
+    <button onclick="LoadClick()">Load Ajax Help</button>
+    <br>
+    <div>
+        <pre>
+
+        </pre>
+    </div>
+</body>
+
+</html>

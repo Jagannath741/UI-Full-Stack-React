@@ -1,0 +1,9 @@
+<script>
+    var manufactured=new Date("2024-02-18 16:35:22");
+
+    var weekdays = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+    var months = ["january","february","march","april","may","jun","july"];
+
+    document.write(`${weekdays[manufactured.getDay()]}
+    ${manufactured.getDate()} - ${months[manufactured.getMonth()]} ${manufactured.getFullYear()}`);
+</script>

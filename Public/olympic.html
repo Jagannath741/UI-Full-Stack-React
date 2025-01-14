@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .contry {
+            font-size: 20px;
+            font-family: arial;
+            padding-left: 8px;
+        }
+
+        .gold {
+            background-color: gold;
+            color: black;
+            padding: 5px;
+            border-radius: 50%;
+            display: inline-block;
+            width: 20px;
+        }
+
+        .silver {
+            background-color: silver;
+            color: black;
+            padding: 5px;
+            border-radius: 50%;
+            display: inline-block;
+            width: 20px;
+        }
+
+        .bronze {
+            background-color: burlywood;
+            color: black;
+            padding: 5px;
+            border-radius: 50%;
+            display: inline-block;
+            width: 20px;
+        }
+
+        .g {
+            background-color: gold;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            margin: 2px;
+        }
+
+        .s {
+            background-color: silver;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            margin: 2px;
+
+
+        }
+
+        .b {
+            background-color: burlywood;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            display: block;
+        }
+
+        .btn-cll {
+            padding-left: 20px;
+
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 35px;
+            background-color: rgb(47, 117, 176);
+            height: 120px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        header span {
+            padding: 12px;
+            background-color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            margin-right: 3px;
+            margin-left: 3px;
+            padding-left: 16px;
+            padding-right: 16px;
+            z-index: 2;
+        }
+
+        .model {
+            background-color: rgb(47, 117, 176);
+            height: 70px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .more {
+            font-size: 40px;
+            padding-left: 40%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+        .model2 {
+            background-color: rgb(47, 117, 176);
+            height: 45px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            padding-left: 40.5%;
+        }
+
+        .mode3 {
+            background-color: rgb(47, 117, 176);
+            height: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-MT {
+            padding-right: -15PX;
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        .btn-ML {
+            padding-left: 10PX;
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        .menu {
+            border-radius: 25px;
+        }
+
+        .bi-list {
+            border-radius: 25px;
+        }
+
+        .bi-search {
+            border-radius: 25px;
+
+        }
+
+        caption {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .row {
+            padding-left: 900px;
+        }
+
+        .row1 {
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+
+        .btn-icon {
+            background-color: rgb(217, 222, 226);
+            height: 30px;
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            padding: 30px;
+            font-size: 30px;
+        }
+
+        .btn-heart {
+            padding-left: 500px;
+        }
+
+        .btn-shr {
+            padding-left: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="header-left">
+                <span class="bi bi-list"></span>
+                <span class="menu">SIGN UP</span>
+                <span class="menu">SCHEDULE</span>
+                <span class="menu">MEDAL TABLE</span>
+                <span class="menu">PLAY</span>
+            </div>
+        </nav>
+        <div class="circle"></div>
+        <div class="header-right">
+            <span class="menu">TICKETING & HOSPITALITY</span>
+            <span class="menu"> SHOP</span>
+            <span class="menu"> ENGLISH<span class="bi bi-chevron-down menu"></span> </span>
+
+            <span class="bi bi-search"></span>
+        </div>
+    </header>
+    <section>
+        <main>
+            <div class="model">
+                <span class="more">MEDAL TABLE</span>
+            </div>
+            <div class="model2">
+                <div class="btn-MT">MEDAL TABLE</div>
+                <div class="btn-ML">MEDALLISTS</div>
+            </div>
+            <div class="mode3">
+                <span class="#nbsp"></span>
+            </div>
+            <div class="btn-icon">
+                <div class="btn-heart">
+                    <span class="bi bi-plus-square-fill"></span>
+                </div>
+                <div class="btn-shr">
+                    <span class="bi bi-plus-square"></span>
+                </div>
+            </div>
+        </main>
+        <div class="row"><span class="row1">WATCH ON<img src="./image/Jiocinema.png" align="center"></span></div>
+
+        <table width="50%" cellspacing="8" cellpadding="8" border="0" align="center">
+            <caption>Olympics 2024-Medals tally</caption>
+            <colgroup span="2"></colgroup>
+            <thead>
+                <tr>
+                    <th>Order</th>
+                    <th>NOCs</th>
+                    <th><span class="gold">G</span></th>
+                    <th><span class="silver">S</span></th>
+                    <th><span class="bronze">B</span></th>
+                    <th align="center"><span class="g"></span><span class="s"></span><span class="b"></span></th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr align="center">
+                    <td>1</td>
+                    <td align="left"><img src="./image/USA.png" width="30"><span class="contry">United States of
+                            America</span></td>
+                    <td>21</td>
+                    <td>30</td>
+                    <td>28</td>
+                    <td>79</td>
+                    <td><span class="bi bi-plus-square"></span></td>
+                </tr>
+                <tr align="center">
+                    <td>2</td>
+                    <td align="left"><img src="./image/CHN.png" width="30"><span class="contry">People's Republic of
+                            China</span></td>
+                    <td>21</td>
+                    <td>18</td>
+                    <td>14</td>
+                    <td>53</td>
+                    <td><span class="bi bi-plus-square"></span></td>
+                </tr>
+                <tr align="center">
+                    <td>3</td>
+                    <td align="left"><img src="./image/FRA.png" width="30"><span class="contry">France</span></td>
+                    <td>13</td>
+                    <td>16</td>
+                    <td>19</td>
+                    <td>48</td>
+                    <td><span class="bi bi-plus-square"></span></td>
+                </tr>
+                <tr align="center">
+                    <td>4</td>
+                    <td align="left"><img src="./image/AUS.png" width="30"><span class="contry">Australia</span></td>
+                    <td>13</td>
+                    <td>12</td>
+                    <td>8</td>
+                    <td>33</td>
+                    <td><span class="bi bi-plus-square"></span></td>
+                </tr>
+                <tr align="center">
+                    <td>5</td>
+                    <td align="left"><img src="./image/GBR.png" width="30"><span class="contry">Great Britain</span>
+                    </td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>17</td>
+                    <td>42</td>
+                    <td><span class="bi bi-plus-square"></span></td>
+                </tr>
+                <tr align="center">
+                    <td>6</td>
+                    <td align="left"><img src="./image/KOR.png" width="30"><span class="contry">Republic of Korea</span>
+                    </td>
+                    <td>11</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>26</td>
+                    <td><span class="bi bi-plus-square"></span></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr height="50" valign="center">
+                    <td colspan="7">
+                        Last updated:August 5, 2024 at 09:44 (your local time)
+                        <br>
+                        Does not include medals won by AIN.
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<script>
+    class Product
+    {
+        Rating={
+            Hydrabad:{
+                Customer:{
+                    Rate:4.7
+                },
+                Vendor:{
+                    Rate:4.8
+                }
+            }
+        }
+        get HydVendorRating(){
+            return this.Rating.Hydrabad.Vendor.Rate
+        }
+    }
+    let obj=new Product();
+    obj.HydVendorRating=prompt("Enter New Rating For Hyd Vendor");
+    document.write(`Hyd Vendor Rating ${obj.HydVendorRating}`)
+</script>

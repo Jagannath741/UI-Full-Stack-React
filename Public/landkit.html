@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header{
+            font-size: 20px;
+            font-family: segoe ui;
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .brand-title{
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(76, 76, 251);
+        }
+        nav span{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .btn-buy{
+            background-color: rgb(76, 76, 251);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+        main{
+            font-family: arial;
+            padding-left: 140px;
+        }
+        .main-title{
+            font-size: 50px;
+            padding-top: 100px;
+        }
+        .main-bar{
+            color: rgb(76, 76, 251);
+        }
+        .main-subtitle{
+            font-size: 45px;
+            padding-top: 10px;
+        }
+        .main-text{
+            padding-top: 20px;
+            width: 450px;
+            font-size: 20px;
+            line-height: 30px;
+            color: gray;
+            padding-bottom: 50px;
+        }
+        .btn-pages{
+            display: inline-block;
+            padding: 18px;
+            font-size: 18px;
+            background-color: rgb(76, 76, 251);
+            color: white;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .btn-docs{
+            display: inline-block;
+            padding: 18px;
+            font-size: 18px;
+            margin-left: 10px;
+            background-color: azure;
+            border: 1px solid gray;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="brand-title">Landkit.</span>
+        </div>
+        <div>
+            <nav>
+                <span>Landings</span>
+                <span>Pages</span>
+                <span>Account</span>
+                <span>Documentation</span>
+            </nav>
+        </div>
+        <div>
+            <span class="btn-buy">Buy Now</span>
+        </div>
+    </header>
+    <section>
+        <main>
+            <img src="./image/landkit-banner.png" class="banner-image" align="right" width="50%">
+            <div>
+                <div class="main-title">Welcome to <span class="main-bar">Landkit.</span></div>
+                <div class="main-subtitle">Develop anything.</div>
+                <div class="main-text">Build a beautiful, modern website with flexible Bootstrap components built from scratch.</div>
+                <div>
+                    <span class="btn-pages">View all pages <span class="bi bi-arrow-right"></span> </span>
+                    <span class="btn-docs">Documentation</span>
+                </div>
+            </div>
+        </main>
+    </section>
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            height: 100vh;
+            background-image: url(../Public/image/academic-main.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .row1 {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            color: white;
+            font-size: 15px;
+        }
+
+        .title {
+            font-size: 25px;
+            font-weight: bold;
+            color: green;
+        }
+
+        .title:hover {
+            color: green;
+            cursor: grab;
+        }
+
+        .bi-clock {
+            font-size: 40px;
+        }
+
+        .bi-facebook,
+        .bi-instagram,
+        .bi-twitter,
+        .bi-dribbble {
+            font-size: 15px;
+            padding-left: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: green;
+            padding: 10px;
+            border-radius: 50px;
+        }
+
+        .bi-facebook:hover,
+        .bi-instagram:hover,
+        .bi-twitter:hover,
+        .bi-dribbble:hover {
+            background-color: green;
+            cursor: grab;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        nav span {
+            padding-left: 45px;
+        }
+
+        .row-2 {
+            padding-left: 70px;
+        }
+
+        .bi-home {
+            padding-left: 35px;
+            color: white;
+        }
+
+        .home {
+            color: green;
+            font-weight: bold;
+        }
+
+        .certificate {
+            font-size: 12px;
+            background-color: green;
+            padding: 15px;
+            border-top-left-radius: 50px;
+            color: white;
+            padding-right: 100px;
+            font-weight: bold;
+        }
+
+        .bi-para {
+            margin-top: 130px;
+            margin-left: 100px;
+        }
+
+        .bi-para1 {
+            color: rgba(252, 246, 246, 0.845);
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .bi-btn {
+            margin-left: 100px;
+            margin-top: 50px;
+        }
+
+        .btn-success {
+            font-family: arial;
+        }
+
+        .btn-light {
+            font-family: arial;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            background-color: whitesmoke;
+            margin-top: 200px;
+            height: 1000px;
+        }
+
+        .left-panel {
+            background-image: url(../Public/image/academic-submain.jpg);
+            background-size: cover;
+            height: 1000px;
+        }
+
+        .right-panel {
+            margin: 50px;
+            font-size: 24px;
+            font-family: arial;
+        }
+
+        .card {
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+            margin-bottom: 8px;
+        }
+
+        .card:hover{
+            background-color: rgb(6, 157, 159);
+            cursor: grab;
+            color: white;
+        }
+
+        .panel-1 {
+            color: green;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .panel-2 {
+            font-size: 50px;
+        }
+
+        h4 {
+            margin: 20px;
+        }
+
+        .card p {
+            color: rgb(169, 169, 169);
+            font-size: 15px;
+            margin: 20px;
+        }
+
+        .card p:hover{
+            background-color: rgb(6, 157, 159);
+            cursor: grab;
+            color: white;
+        }
+
+        .card-img {
+            margin: 20px;
+        }
+
+        main {
+            background-image: url(../Public/image/academic-book4.png);
+            background-size: cover;
+            height: 300px;
+        }
+
+        .shade {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+        }
+
+        .card-title {
+            display: flex;
+        }
+
+        .card-icon {
+            margin: 20px;
+            font-size: 150px;
+            color: whitesmoke;
+        }
+
+        .card-num {
+            margin-top: 100px;
+        }
+
+        .card-num1 {
+            font-size: 45px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .card-num2 {
+            color: white;
+            font-size: 17px;
+        }
+
+        .bi-extra {
+            background-color: whitesmoke;
+            height: 1000px;
+            text-align: center;
+        }
+
+        .bi-extra1 {
+            color: green;
+            font-weight: bold;
+        }
+
+        .bi-extra h1 {
+            color: black;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="row1">
+            <div>
+                <div class="title">ACADEMIA</div>
+                <div>ONLINE EDUCATION & LEARNING</div>
+            </div>
+            <div>
+                <span class="bi bi-clock"></span>
+                <div class="main" style="margin: -50px 19px -50px 50px;">
+                    <span>MOnday-Friday</span>
+                    <div>8.00AM-8.00PM</div>
+                </div>
+            </div>
+            <div>
+                <span class="bi bi-telephone" style="font-size: 37px;"></span>
+                <div class="sub-main" style="margin: -47px 21px -69px 48px;">
+                    <span>Call Us</span>
+                    <div>+91 9777205447</div>
+                </div>
+            </div>
+            <div class="p-3">
+                <span class="bi bi-facebook"></span>
+                <span class="bi bi-instagram"></span>
+                <span class="bi bi-twitter"></span>
+                <span class="bi bi-dribbble"></span>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="bi-home">
+            <span class="home">Home</span>
+            <span>All Courses</span>
+            <span>About</span>
+            <span>Team</span>
+            <span>Pricing </span>
+            <span>Jornol</span>
+            <span>Contact</span>
+        </div>
+        <div>
+            <span class="certificate"> &nbsp; &nbsp; &nbsp; &nbsp; GET CERTIFICATE</span>
+        </div>
+    </nav>
+
+    <div class="bi-para">
+        <div class="bi-para1">WELLCOME TO ACADEMIA</div>
+        <div>
+            <h1>Best Online Education<br>
+                Expertise</h1>
+        </div>
+        <p class="bi-para1">Far far away , begind the word mountains , far form the countaries vokalia
+            <br>and consonantia , there live the blind texts
+        </p>
+    </div>
+    <div class="bi-btn">
+        <button class="btn btn-success">STARTED NOW! <span class="bi bi-arrow-right"></span></button>
+        <button class="btn btn-light">VIEW COURSE <span class="bi bi-arrow-right"></span></button>
+    </div>
+    <section>
+        <div class="left-panel">
+
+        </div>
+        <div class="right-panel">
+            <div class="panel-1">Learn Anything</div>
+            <div class="panel-2">Benefits About Online <br>Learning Expertise</div>
+            <div>
+                <div class="card">
+                    <div class="card-img">
+                        <span><img src="../Public/image/academic-book.png"></span>
+                    </div>
+                    <div>
+                        <h4> Online Courses</h4>
+                        <p>Far far away, behind the word mountains, far from the countries<br>
+                            Vokalia and Consonantia, there live the blind texts.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card">
+                    <div class="card-img">
+                        <span><img src="../Public/image/academic-book1.png"></span>
+                    </div>
+                    <div>
+                        <h4>Earn A Certificates</h4>
+                        <p>Far far away, behind the word mountains, far from the countries<br>
+                            Vokalia and Consonantia, there live the blind texts.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card">
+                    <div class="card-img">
+                        <span><img src="../Public/image/academic-book2.png"></span>
+                    </div>
+                    <div>
+                        <h4>Learn with Expert</h4>
+                        <p>Far far away, behind the word mountains, far from the countries<br>
+                            Vokalia and Consonantia, there live the blind texts.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card">
+                    <div class="card-img">
+                        <span><img src="../Public/image/academic-book3.png"></span>
+                    </div>
+                    <div>
+                        <h4>Web Management</h4>
+                        <p>Far far away, behind the word mountains, far from the countries<br>
+                            Vokalia and Consonantia, there live the blind texts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="shade">
+            <div class="card-title">
+                <div class="card-icon">
+                    <span><img src="../Public/image/academic-icon1.png"></span>
+                </div>
+                <div class="card-num">
+                    <div class="card-num1">3,000</div>
+                    <span class="card-num2">SUCCESS STORIES</span>
+                </div>
+            </div>
+            <div class="card-title">
+                <div class="card-icon">
+                    <span><img src="../Public/image/academic-icon2.png"></span>
+                </div>
+                <div class="card-num">
+                    <div class="card-num1">320</div>
+                    <span class="card-num2">Trusted Tutors</span>
+                </div>
+            </div>
+            <div class="card-title">
+                <div class="card-icon">
+                    <span><img src="../Public/image/academic-icon3.png"></span>
+                </div>
+                <div class="card-num">
+                    <div class="card-num1">1,000</div>
+                    <span class="card-num2">Schedules</span>
+                </div>
+            </div>
+            <div class="card-title">
+                <div class="card-icon">
+                    <span><img src="../Public/image/academic-icon4.png"></span>
+                </div>
+                <div class="card-num">
+                    <div class="card-num1">587</div>
+                    <span class="card-num2">Courses</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="bi-extra">
+        <div class="bi-extra1">Our Courses</div>
+        <h1>Explore Our Popular Online Courses</h1>
+    </div>
+</body>
+
+</html>

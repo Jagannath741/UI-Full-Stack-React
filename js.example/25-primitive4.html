@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function GenerateClick(){
+            document.getElementById("container").innerHTML=" ";
+            var table = document.createElement("table")
+            table.border=1;
+
+            var thead = document.createElement("thead");
+            var tbody = document.createElement("tbody");
+
+            var tr_for_head = document.createElement("tr");
+            var tr_for_body = document.createElement("tr");
+
+            var th = document.createElement("th");
+            var td = document.createElement("td");
+
+            th.innerHTML="Name";
+            td.innerHTML="Samsung TV";
+
+            tr_for_head.appendChild(th);
+            tr_for_body.appendChild(td);
+
+            thead.appendChild(tr_for_head);
+            tbody.appendChild(tr_for_body);
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+
+            document.getElementById("container").appendChild(table);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="GenerateClick()">Generate</button>
+    <div id="container">
+
+    </div>
+</body>
+</html>

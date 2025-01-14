@@ -1,0 +1,18 @@
+<script>
+    var product = {
+        id:1,
+        Name:"Samsung TV",
+        Price:55000,
+        Stock:true,
+        Rating:3.5
+    }
+    delete product.Price
+     Object.keys(product).map(function(key)  {
+        document.write(`${key} : ${product[key]} <br>`);
+    })
+    if("Rating" in product){
+        document.write(`Rating : ${product.Rating} <br> ` )
+    }else{
+        document.write(`<code>Product Rating Is Not Available</code> <br>`)
+    }
+</script>

@@ -1,0 +1,33 @@
+<script>
+    class product
+    {
+        title
+        price
+        category
+        print(){
+            document.write(`$(this.title)<br>$(this.price)<br>$(this.category)`)
+        }
+    }
+class TV extends product
+{
+    title = "Samsung TV";
+    price = 56000.44;
+    category = "Electronics";
+    Features = "Supports 4k Videos with 120hz refresh rate";
+    print(){
+        super.print();
+        document.write(`${this.Features}`)
+    }
+}
+class NIkeCasual extends product
+{
+    title = "Nike casual waer";
+    price = 3450.44;
+    category = "Footwear";
+    Features = "With Foam Sole";
+    print(){
+        super.print();
+        document.write(`${this.Features}`)
+    }
+}
+</script>

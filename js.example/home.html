@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>function bodyload() {
+            var products = [];
+            var http = new XMLHttpRequest();
+
+            http.open("get", "../data/product.json", true);
+            http.send();
+
+            http.onreadystatechange = function () {
+                if (http.readyState === 4) {
+                    products = JSON.parse(http.responseText);
+                    products.map(function (product) {
+
+                        var div = document.createElement("div");
+                        div.className = "row my-3";
+                        div.innerHTML = `
+                        <div class="col-3">
+                            <img src=${product.image} width="100%">
+                            </div>
+                            <div class="col-9">
+                                <div class="fs-6 fw-bold">${product.title}</div>
+                                <div>
+                                     <span class="badge bg-success text-white p-1"> ${product.rate.rating} <span class="bi bi-star-fill"></span> </span>
+                                     <span class="text-secondary fw-bold ms-3"> ${product.rate.ratings} ratings & ${product.rate.reviews} reviews </span>
+                                     </div> 
+                                     <div class="my-3">
+                                        <h5> &#8377; ${product.price.toLocaleString()} </h5>
+                                        </div>
+                                        <div class="my-2">
+                                             <h6>Available Offers </h6>
+                                             <ul>
+                                                </ul>
+                                                </div>
+                                                </div>`;
+                        document.querySelector("section").appendChild(div);
+                    })
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="container-fluid" onload="bodyload()">
+    <section>
+
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function VerifyCode(){
+            var txtCode = document.getElementById("txtCode").value;
+            var lblError = document.getElementById("lblError");
+
+            if(txtCode.charAt(0)=="S"){
+                lblError.innerHTML = "";
+            }else{
+                lblError.innerHTML = "Code must started with S ".fontcolor("red");
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>HDFC CODE</dt>
+        <dd><input type="text" onblur="VerifyCode()" id="txtCode"></dd>
+        <dd id="lblError"></dd>
+    </dl>
+</body>
+</html>

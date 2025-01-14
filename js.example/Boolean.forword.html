@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function VerifyCard() {
+            var card = document.getElementById("txtCard").value;
+            if (card === "4445556667778888") {
+                document.getElementById("txtCvv").disabled = false;
+                document.getElementById("CvvContainer").style.display = "block";
+            }
+        }
+        function VerifyCvv() {
+            var cvv = document.getElementById("txtCvv").value;
+            if (cvv === "143") {
+                document.getElementById("1stExpiry").disabled = false;
+                document.getElementById("expiryContainer").style.display = "block";
+            }
+        }
+        function VerifyExpiry() {
+            var expiry = document.getElementById("1stExpiry").value;
+            if (expiry === "2025") {
+                document.querySelector("button").disabled = false;
+                document.querySelector("button").style.display = "block";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <dl>
+        <dt>Card</dt>
+        <dd><input type="text" id="txtCard" onblur="VerifyCard()"></dd>
+        <div id="CvvContainer" style="display: none;">
+            <dt>CVV</dt>
+            <dd><input type="text" id="txtCvv" size="4" onblur="VerifyCvv()" disabled></dd>
+        </div>
+        <div id="expiryContainer" style="display: none;">
+            <dt>Expiry</dt>
+            <dd>
+                <select disabled id="1stExpiry" onblur="VerifyExpiry()">
+                    <option>Select Expiry</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                </select>
+            </dd>
+        </div>
+    </dl>
+    <button disabled style="display: none;">Pay</button>
+</body>
+
+</html>

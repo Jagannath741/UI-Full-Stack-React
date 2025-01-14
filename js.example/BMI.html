@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="shurtcut icon" href="../Public/image/bmi-icon1.png">
+    <script type="text/javascript">
+        function CalculateClick() {
+            var Height = parseInt(document.getElementById("txtHeight").value) / 100;
+            var Weight = parseInt(document.getElementById("txtWeight").value);
+            var BMI = Weight / (Height * Height);
+            document.getElementById("lblBMI").innerHTML = "Your Body Mass Index is" + "<br>" + BMI.toFixed(2);
+        }
+    </script>
+    <style>
+        body {
+            background-image: url("../Public/image/bmi.jpg");
+            background-size: cover;
+        }
+
+        .row {
+            padding-left: 20px;
+        }
+
+        .calculator {
+            width: 400px;
+            background-color: rgb(79, 113, 248, 0.1);
+            margin: 165px 0px 0px 950px;
+            border: 5px solid whitesmoke;
+            border-radius: 90px;
+        }
+
+        .bi-btn {
+            padding: 10px 20px 10px 20px;
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+    <div class=" p-3 calculator">
+        <div class="mt-2  fs-2 text-center fw-bold" style="color:white; box-shadow: 5px 5px 30px blue;">BMI CALCULATOR
+        </div>
+        <div style="color: white;">
+            <div class="row mt-2">
+                <div class="col mt-3">
+                    <span class="me-2 fw-bold">AGE&nbsp;(1-120)</span>
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col">
+                    <input type="text" id="txtAge" class="form-control" placeholder="age">
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col">
+                    <div class="bmi-info fw-bold">HEIGHT </div>
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col">
+                    <input type="text" class="form-control" id="txtHeight" placeholder="cm">
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col">
+                    <div class="bmi-info fw-bold">WEIGHT </div>
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col">
+                    <input type="text" class="form-control" id="txtWeight" placeholder="kg">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col text-end">
+                <button class="btn btn-primary me-4 bi-btn rounded rounded-4"
+                    onclick="CalculateClick()">Calculate</button>
+            </div>
+        </div>
+        <div class="row mt-3" style="color: white;">
+            <div class="col text-center">
+                <div class="fs-4 fw-bold" id="lblBMI"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

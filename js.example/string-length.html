@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function VerifyName() {
+            var userName = document.getElementById("txtName").value;
+            var lblName = document.getElementById("lblName");
+
+            if (userName.length == 0) {
+                lblName.innerHTML = "Name Required".fontcolor("red");
+            } else {
+                if (userName.length < 3) {
+                    lblName.innerHTML = "Name to short".fontcolor("blue");
+                } else {
+                    lblName.innerHTML = "";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <dl>
+        <dt>User name</dt>
+        <dd><input onkeyup="VerifyName()" type="text" id="txtName"></dd>
+        <dt id="lblName"></dt>
+    </dl>
+</body>
+
+</html>

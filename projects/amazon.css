@@ -1,0 +1,113 @@
+.card {
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 2px gray;
+    padding: 10px;
+    margin: 10px;
+    height: 400px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    margin-top: -250px;
+}
+
+.card-title {
+    font-family: arial;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.card-img {
+    width: 100%;
+    height: 230px;
+}
+
+.card-header {
+    height: 70px;
+}
+
+.card-body {
+    height: 300px;
+    font-family: arial;
+    font-size: 12px;
+}
+
+.link {
+    font-family: arial;
+    color: rgb(49, 145, 114);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    grid-gap: 10px;
+}
+
+.card-body-img {
+    width: 100%;
+}
+
+.bi-tro span {
+    height: 1000px;
+    width: 10px;
+}
+
+.card-c1 {
+    border: 2px solid grey;
+    width: 250px;
+    height: 300px;
+    background-color: white;
+}
+
+.card-b1 {
+    margin-top: -50px;
+}
+
+.card-f1 {
+    margin-top: -55px;
+}
+
+.card-f2 {
+    border: 1px solid grey;
+    background-color: rgb(211, 5, 5);
+    border-radius: 4px;
+    font-size: 10px;
+    padding: 5px;
+    color: white;
+}
+
+.card-f3 {
+    font-size: 10px;
+    color: rgb(243, 22, 22);
+    font-weight: bold;
+}
+
+.card-f4 {
+    font-size: 15px;
+    color: black;
+}
+
+.card-f5 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgba(3, 3, 3, 0.693);
+}
+
+.bi-inst {
+    margin-left: 6px;
+    padding: 8px;
+}
+
+.bi-inst span {
+    margin: 4px;
+}
+
+.bi-inst1 span {
+    margin: 15px;
+}
+
+.bi-inst2 span {
+    margin: 25px;
+}

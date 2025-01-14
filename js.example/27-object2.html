@@ -1,0 +1,16 @@
+<script>
+    var product = {
+        Name: "TV",
+        Price: 40000.40,
+        Qty: 1,
+        Total: function () {
+            return this.Qty * this.Price;
+        },
+        print: function () {
+            document.write(`Name=${this.Name}<br>Price=${this.Price}<br>Qty=${this.Qty}<br>Total=${this.Total()}`);
+        }
+    }
+    product.Price = prompt("Enter Price");
+    product.Qty = parseInt(prompt("Enter Quantity"))
+    product.print();
+</script>

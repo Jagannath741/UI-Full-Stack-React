@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leetcode</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: gray;
+            font-size: 20px;
+        }
+        .bi-ima{
+            padding: 5px;
+            padding-left: 24px;
+            background-image: url(./image/leetcode.png);
+            background-position: center;
+            background-size: 30px;
+        }
+        header span{
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
+            padding: 5px;
+            background-color: lightgray;
+            border-radius: 10px;
+        }
+        .js {
+            color: rgba(218, 165, 32, 0.867);
+            background-color: white;
+        }
+        .btn-premium{
+            color: goldenrod;
+            background-color: black;
+        }
+        .submit{
+            color: rgb(84, 219, 172);
+            background-color: black;
+        }
+        section{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            grid-gap: 7px;
+            background-color: rgb(220, 206, 206);
+            height: 600px;
+            padding: 10px;
+        }
+        .panel-top , .panel-down{
+            background-color: white;
+            border-radius: 10px;
+            overflow: auto;
+        }
+        .panel-top-shurtcut{
+            font-size: 15px;
+            padding: 10px;
+            background-color: rgb(209, 195, 195);
+            display: flex;
+            margin: 2px;
+            justify-content: space-between;
+        }
+        .panel-top-shurtcut span{
+            padding-left: 5px;
+            padding-right: 10px;
+            font-weight: bold;
+        }
+        .h1{
+            font-size: 27px;
+            font-family: segoe ui;
+            font-weight: unset;
+            color: black;
+        }
+        h2{font-size: 27px;
+            font-family: segoe ui;
+            font-weight: unset;
+            color: black;
+           margin-left: 150px;
+           margin-bottom: 20px;
+        }
+        .count{
+            font-size: 20px;
+            margin-left: 13px;
+        }
+        .btn-easy{
+            background-color: black;
+            color:aqua ;
+            border-radius: 5px;
+            padding: 2px;
+            margin-left: 2px;
+            font-size: 14px;
+        }
+        .bi-lock{
+            background-color: rgb(234, 198, 153);
+            border-radius: 5px;
+            padding: 2px;
+            margin-left: 5px;
+            font-size: 14px;
+        }
+        .function{
+            margin-left: 15px;
+            padding-top: 20px;
+            font-size: 16px;
+        }
+        .panel-down-shurtcut{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            background-color:rgb(209, 195, 195) ;
+            padding: 8px;
+        }
+        pre{
+            margin-left: -130px;
+            font-size: 16px;
+        }
+        var {
+            color: blue;
+        }
+        code samp{
+            color: green;
+            margin-left: 50px;
+        }
+        .panel-down{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="bi-ima"></span>
+            <span class="js">JS</span>
+            <span> 30 Days of Javascript </span>
+            <span class="bi bi-chevron-left"> </span>
+            <span class="bi bi-chevron-right"></span>
+            <span class="bi bi-shuffle"></span>
+        </div>
+        <div>
+            <span class="bi bi-bug"></span>
+            <span class="bi bi bi-play-btn"></span>
+            <span> Run </span>
+            <span class="bi bi-cloud-upload"></span>
+            <span class="submit"> Submit </span>
+            <span class="bi bi-file"></span>
+        </div>
+        <div>
+            <span class="bi bi-square"></span>
+            <span class="bi bi-gear"></span>
+            <span> Register </span>
+            <span> or </span>
+            <span> Sign in </span>
+            <span class="btn-premium"> Premium </span>
+        </div>
+    </header>
+    <section>
+        <div class="panel-top">
+            <div class="panel-top-shurtcut">
+                <div>
+                    <span class="bi bi-journal-text">Descripction :</span>
+                <span class="bi bi-book">Editorial :</span>
+                <span class="bi bi-funnel">Soluction :</span>
+                <span class="bi bi-clock-history">Submition :</span>
+                </div>
+                <div>
+                    <span class="bi bi-square"></span>
+                    <span class="bi bi-chevron-left"></span>
+                </div>
+            </div>
+            <div>
+                <h1 class="h1">2667. Create Hello World Function</h1>
+            </div>
+            <div>
+                <span class="btn-easy">Easy</span>
+                <span class="bi bi-lock">Companies</span>
+            </div>
+            <div class="function">Write a function createHelloWorld. It should return a new function that always returns "Hello World".</div>
+            <div>
+                <pre>
+                    <h2 class="h2"> Example 1:</h2 ex>
+
+                    Input: args = []
+                    Output: "Hello World"
+                    Explanation:
+                    const f = createHelloWorld();
+                    f(); // "Hello World"
+
+                    The function returned by createHelloWorld should always return "Hello World".
+
+                    <h2 class="h2">Example 2:</h2>
+
+                    Input: args = [{},null,42]
+                    Output: "Hello World"
+                    Explanation:
+                    const f = createHelloWorld();
+                    f({}, null, 42); // "Hello World"
+
+
+                    Any arguments could be passed to the function but it should still always return "Hello World".
+                </pre>
+            </div>
+            <div class="count">
+                constrains :
+            </div>
+        </div>
+        <div class="panel-down">
+            <div>
+                <var><span class="bi bi-code-slash"></var> Code </span>
+            </div>
+            <div class="panel-down-shurtcut">
+                <div>
+                <span>Javascript<span class="bi bi-chevron-down"></span></span>
+                <span class="bi bi-lock">Auto</span>
+            </div>
+            <div>
+                <span class="bi bi-text-left"></span>
+                <span class="bi bi-bookmark"></span>
+                <span>{ }</span>
+                <span class="bi bi-arrow-counterclockwise"></span>
+                <span class="bi bi-arrows-angle-contract"></span>
+            </div>
+            </div>
+            <div>
+                <pre>
+                    <code>
+                        <samp>
+                        /**
+                        * @return {Function}
+                        */
+                        var <var>createHelloWorld</var> = function() {
+                            
+                            return function(...args) {
+                                
+                            }
+                        };
+                        /**
+                        * const f = createHelloWorld();
+                        * f(); // "Hello World"
+                        */
+                        </smap>
+                    </code>
+                </pre>
+            </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

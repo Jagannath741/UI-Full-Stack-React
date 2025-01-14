@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function SessionEnd(){
+            alert('Your session Timed out - Please relogin');
+            sessionStorage.removeItem("username");
+            location.href="./login1.html";
+        }
+
+        function bodyload(){
+
+            if(sessionStorage.getItem("username")===null){
+                location.href="./login1.html";
+            }else{
+                document.getElementById("user").innerHTML=sessionStorage.getItem("username");
+                setTimeout(SessionEnd,10000);
+            }
+        }
+
+        function SingoutClick(){
+            sessionStorage.removeItem("username");
+            location.href="./login1.html";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <h2>Welcome <span id="user"></span><button onclick="SingoutClick()">Singout</button></h2>
+</body>
+</html>

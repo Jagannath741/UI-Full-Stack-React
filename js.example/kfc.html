@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC</title>
+    <link rel="shurtcut icon" href="../Public/image/kfc-logo.png">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        function OrderClick() {
+            var mealName = ""
+            var lunchName = ""
+            var mealCost = 0;
+            var lunchCost = 0;
+
+            var Burger = document.getElementById("optBurger");
+            var Match = document.getElementById("optMatch");
+
+            if (Burger.checked) {
+                mealCost = 120;
+                mealName = Burger.value;
+            }
+
+            if (Match.checked) {
+                mealCost = 100;
+                mealName = Match.value;
+            }
+
+            var lunch = document.getElementById("optLunch");
+            var spice = document.getElementById("optSpice");
+
+            if (lunch.checked) {
+                lunchCost = 40;
+                mealCost += lunchCost;
+                lunchName += lunch.value + "<br>";
+            }
+
+            if (spice.checked) {
+                lunchCost = 60;
+                lunchName = spice.value + "<br>"
+                mealCost += lunchCost;
+            }
+
+            total = mealCost;
+
+            document.getElementById("lblCustomer").innerHTML = document.getElementById("txtName").value;
+            document.getElementById("lblMobile").innerHTML = document.getElementById("txtMobile").value;
+
+            document.getElementById("lblMeal").innerHTML = mealName;
+            document.getElementById("lblSpecial").innerHTML = lunchName;
+            document.getElementById("lblTotal").innerHTML = total;
+
+        }
+    </script>
+</head>
+
+<body class="container-fluid">
+    <header>
+        <img src="../Public/image/kfc-banner.png" width="100%">
+    </header>
+    <section>
+        <div class="accordion" id="kfc">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button data-bs-target="#customer" data-bs-toggle="collapse" class="btn btn-danger w-100">Customer
+                        Details</button>
+                </div>
+                <div class="accordion-collapse collapse" id="customer" data-bs-parent="#kfc">
+                    <div class="accordion-body">
+                        <dl>
+                            <dt>Customer Name</dt>
+                            <dd><input type="text" id="txtName" class="form-control"></dd>
+                            <dt>Mobile</dt>
+                            <dd> <input type="text" id="txtMobile" class="form-control"></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button data-bs-target="#meal" data-bs-toggle="collapse" class="btn btn-danger w-100">Select Your
+                        meal</button>
+                </div>
+                <div class="accordion-collapse collapse" id="meal" data-bs-parent="#kfc">
+                    <div class="accordion-body row text-center">
+                        <div class="col">
+                            <h2>Burger Fest</h2>
+                            <img src="../Public/image/kfc1.jpg" width="200" height="200">
+                            <div>
+                                <input type="radio" id="optBurger" name="meal" value="OMgBurger"
+                                    class="form-check-input"><label>120/-</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h2>Match day</h2>
+                            <img src="../Public/image/kfc2.jpg" width="200" height="200">
+                            <div>
+                                <input type="radio" id="optMatch" name="meal" value="OmgMarch"
+                                    class="form-check-input"><label>100/-</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button data-bs-target="#lunch" data-bs-toggle="collapse" class="btn btn-danger w-100">Select Lunch
+                        Item</button>
+                </div>
+                <div class="accordion-collapse collapse" id="lunch" data-bs-parent="#kfc">
+                    <div class="accordion-body row text-center">
+                        <div class="col">
+                            <h2>Lunch special</h2>
+                            <img src="../Public/image/kfc3.jpg" width="200" height="200">
+                            <div>
+                                <input type="checkbox" id="optLunch" name="lunch" value="OMgLunch"
+                                    class="form-check-input"><label>40/-</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h2>Spice special</h2>
+                            <img src="../Public/image/kfc4.jpg" width="200" height="200">
+                            <div>
+                                <input type="checkbox" id="optSpice" name="lunch" value="OmgSpice"
+                                    class="form-check-input"><label>60/-</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-danger w-100 my-2" onclick="OrderClick()" data-bs-target="#Summary"
+            data-bs-toggle="modal">Placed Order</button>
+        <div class="modal fade" id="Summary">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="fw-bold" style="color: red;">Your Bill Summary</div>
+                    </div>
+                    <div class="modal-body">
+                        <dl class="row">
+                            <dt class="col-8">Customer Name</dt>
+                            <dd class="col-4" id="lblCustomer"></dd>
+                            <dt class="col-8">Mobile</dt>
+                            <dd class="col-4" id="lblMobile"></dd>
+                            <dt class="col-8">Meal Name</dt>
+                            <dd class="col-4" id="lblMeal"></dd>
+                            <dt class="col-8">Special Name</dt>
+                            <dd class="col-4" id="lblSpecial"></dd>
+                            <dt class="col-8">Total Amount</dt>
+                            <dd class="col-4" id="lblTotal"></dd>
+                        </dl>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-bs-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

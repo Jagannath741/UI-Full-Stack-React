@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function UploadClick(){
+            var pic = document.createElement("img");
+            pic.src = "../public/image/women-fashion.jpg";
+            pic.height = "200";
+            pic.width = "200";
+
+            document.querySelector("figure").appendChild(pic);
+        }
+        function bodyLoad(){
+            var h1 = document.createElement("h1");
+            h1.innerHTML = "Dynamic Element";
+            
+            document.querySelector("body").appendChild(h1);
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <button onclick="UploadClick()">Upload</button>
+    <figure>
+
+    </figure>
+</body>
+</html>

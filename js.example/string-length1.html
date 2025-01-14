@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function VerifyComment() {
+            var comments = document.getElementById("txtComment").value;
+            var lblComment = document.getElementById("lblComment");
+
+            lblComment.innerHTML = `${100 - comments.length} char Remaining`;
+        }
+    </script>
+</head>
+
+<body>
+    <dl>
+        <dt>Your comments</dt>
+        <dd><textarea onkeyup="VerifyComment()" id="txtComment" rows="4" cols="40" maxlength="100"></textarea></dd>
+    </dl>
+    <dd id="lblComment"></dd>
+</body>
+
+</html>

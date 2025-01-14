@@ -1,0 +1,17 @@
+<script type="text/javascript">
+    var data = new Map();
+
+    data.set(2,{Name:"Samsung TV",Price:"5000"});
+    data.set("HTML","It is a mark of language");
+    data.set("cities",["Delhi","Hyd"]);
+
+    for(var item of data.keys()){
+        document.write(item + "<br>")
+    }
+    for(var item of data.values()){
+        document.write(item + "<br>");
+    }
+    for(var item of data.entries()){
+        document.write(item + "<br>");
+    }
+</script>

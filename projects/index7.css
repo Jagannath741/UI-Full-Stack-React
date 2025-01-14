@@ -1,0 +1,381 @@
+header {
+    height: 150px;
+}
+
+.top-header-div {
+    height: 40px;
+    font-size: 16px;
+    background-color: rgb(229, 230, 230);
+    margin-left: -12px;
+    margin-right: -12px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.top-div-left {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.buttom-header-div {
+
+    width: 100%;
+    height: 100px;
+    padding-left: 70px;
+    padding-right: 70px;
+    background-color: white;
+}
+
+.govt-title {
+    padding-right: 18px;
+}
+
+.mint-title {
+    padding-right: 18px;
+    padding-left: 18px;
+    border-left: 1px solid rgb(199, 199, 199);
+    border-right: 1px solid rgb(199, 199, 199);
+}
+
+.digital-logo {
+    padding-left: 18px;
+}
+
+.select-lang {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+select {
+    border: none;
+    background-color: rgb(229, 230, 230);
+    font-weight: bold;
+    font-family: Georgia;
+}
+
+.bi-person-circle {
+    margin-right: 18px;
+    margin-top: -2px;
+    /* background-image: linear-gradient(to bottom right, rgb(110, 240, 234), rgb(54, 100, 237)); */
+}
+
+.buttom-header-div div span img {
+    height: 75px;
+}
+
+.bottom-header-right {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: Arial;
+
+}
+
+.bi-justify {
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+.student-option .bi-mortarboard {
+    font-size: 28px;
+    color: rgb(254, 126, 126);
+}
+
+.institute-option .bi-houses {
+    font-size: 28px;
+    color: rgb(194, 82, 166);
+}
+
+.officer-option .bi-person-gear {
+    font-size: 28px;
+    color: rgb(119, 113, 243);
+}
+
+.public-option .bi-people {
+    font-size: 28px;
+    color: rgb(97, 189, 214);
+}
+
+.side-option-heading {
+    font-size: 19px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    color: gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+.std-content:hover {
+    color: rgb(254, 126, 126);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+}
+
+.inst-content:hover {
+    color: rgb(194, 82, 166);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+}
+
+.off-content:hover {
+    color: rgb(119, 113, 243);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+}
+
+.pub-content:hover {
+    color: rgb(97, 189, 214);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+}
+
+.login-btn {
+    border-style: none;
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+.carousel-img {
+    height: 200px;
+}
+
+.signup-btn,
+.signin-btn {
+    text-align: center;
+    border: none;
+    background-color: rgb(229, 230, 230)
+}
+
+.login-title,
+.signup-title {
+    color: rgb(139, 140, 140);
+    font-size: 25px;
+    font-family: Verdana;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.details {
+    font-size: 13px;
+    font-family: Verdana;
+    color: rgb(77, 77, 254);
+}
+
+.signin-form,
+.login-form {
+    margin: 0px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.modal input {
+    outline: none;
+    width: 70%;
+    border: none;
+}
+
+.inputs {
+    border-bottom: 1px solid gray;
+}
+
+.forgot {
+    font-size: 12px;
+    margin-left: 165px;
+    color: gray;
+}
+
+.form-btn {
+    border: none;
+    background-image: linear-gradient(to bottom right, rgb(110, 240, 234), rgb(54, 100, 237));
+    border-radius: 20px;
+    color: white;
+    width: 175px;
+    height: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.form-btn:hover {
+    opacity: 0.9;
+}
+
+.md-footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.banner {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.boxes {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 100px;
+}
+
+.students {
+
+    height: 180px;
+    width: 25%;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: rgb(254, 126, 126);
+    align-content: center;
+    text-align: center;
+    transition: 0.7s;
+}
+
+.institution {
+
+    background-color: rgb(194, 82, 166);
+    height: 180px;
+    width: 25%;
+    margin-left: 15px;
+    margin-right: 15px;
+    align-content: center;
+    text-align: center;
+    transition: 0.7s;
+}
+
+.officers {
+
+    background-color: rgb(119, 113, 243);
+    height: 180px;
+    width: 25%;
+    margin-left: 15px;
+    margin-right: 15px;
+    align-content: center;
+    text-align: center;
+    transition: 0.7s;
+}
+
+.public {
+    background-color: rgb(97, 189, 214);
+    height: 180px;
+    width: 25%;
+    margin-left: 15px;
+    margin-right: 15px;
+    align-content: center;
+    text-align: center;
+    transition: 0.7s;
+}
+
+.students:hover,
+.public:hover,
+.officers:hover,
+.institution:hover {
+    box-shadow: 0px 28px 20px -15px rgb(105, 105, 105);
+    transition: 0.6s;
+    transform: translateY(-10px);
+
+}
+
+.inside-div {
+    font-size: 26px;
+    font-family: Arial;
+    color: white;
+}
+
+.side-option {
+    text-align: center;
+    border: none;
+    background-color: white;
+}
+
+.notification-div {
+    margin: 120px 240px 120px 240px;
+    justify-content: center;
+    display: flex;
+    gap: 45px;
+}
+
+.Announcements,
+.getOTR {
+    width: 430px;
+}
+
+.Announcements img {
+    margin-top: -30px;
+}
+
+.getOTR img {
+    margin-bottom: 21px;
+}
+
+.notification-title {
+    font-size: 34px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.announce-box {
+    height: 370px;
+    overflow-y: scroll;
+}
+
+.para1,
+.para2,
+.para3,
+.para4,
+.para5,
+.para6,
+.para7,
+.para8 {
+    font-size: 16px;
+    margin-top: 30px;
+    padding-bottom: 12px;
+    border-bottom: 1px dotted gray;
+}
+
+.para1,
+.para2 {
+    color: rgb(1, 188, 1);
+}
+
+.footer-imgs {
+    justify-content: center;
+}
+
+.color-img {
+    filter: grayscale();
+}
+
+.color-img:hover {
+    filter: none;
+}
+
+.footer-line {
+    margin-top: 40px;
+    padding-top: 7px;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(175, 173, 173);
+    color: black;
+    text-align: center;
+    font-size: 23px;
+    font-family: monospace;
+
+}

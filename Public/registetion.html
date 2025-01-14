@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form method="get">
+     <dl>
+        <dt>Name</dt>
+        <dd><input type="text" required minlength="4" maxlength="10"  placeholder="Name min 4 chars" name="UserName"></dd>
+        <dt>Age</dt>
+        <dd><input type="text" required autofocus maxlength="2"  name="Age" size="2"></dd>
+        <dt>OTP</dt>
+        <dd><input type="text" required name="OTP" size="4" maxlength="4"></dd>
+        <dt>Country</dt>
+        <dd>
+            <input type="text" name="Country" list="countries" placeholder="Your country">
+            <datalist id="countries">
+                <option>India</option>
+                <option>Australia</option>
+                <option>UK</option>
+                <option>US</option>
+                <option>Indonesia</option>
+
+            </datalist>
+        </dd>
+     </dl>
+     <button>Submit</button>
+   </form>
+</body>
+</html>
